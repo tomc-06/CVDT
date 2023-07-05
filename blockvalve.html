@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>FutureGrid CVDT Demo</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="styles.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <h1><span class="Future">Future</span><span class="Grid">Grid</span> CVDT Demonstrator</h1>
+    <h2>Block Valve</h2>
+
+    <!-- <model-viewer> HTML element -->
+        <model-viewer src="models/Lanark-v3.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="imgs/blockvalve.webp" shadow-intensity="1" auto-rotate>
+        <button class="Hotspot" slot="hotspot-2" data-position="1509.3541745429116m 7244.476715595264m -3081.874928324757m" data-normal="0.06026256541548834m 0.9342131662435462m -0.35158808743578407m" data-visibility-attribute="visible">
+         <div class="HotspotAnnotation"> <a href="valvetest.html">900NB Ball Valve</a></div>
+     </button>
+       <div class="progress-bar hide" slot="progress-bar">
+           <div class="update-bar"></div>
+       </div>
+       <button slot="ar-button" id="ar-button">
+           View in your space
+       </button>
+       <div id="ar-prompt">
+           <img src="imgs/ar_hand_prompt.png">
+       </div>
+     </model-viewer>  
+     <script src="script.js"></script>
+
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    
+    <!-- Live Data Section -->
+      <button id="livedatabutton" type='button'>Get Live Data</button>
+      <p id="temperatureString"></p>
+      <p id="gasPressureString"></p>
+      <p id="gasTempString"></p>
+      <p id="gasBlendString"></p>
+
+  </body>
+</html>
