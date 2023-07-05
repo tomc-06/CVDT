@@ -18,7 +18,7 @@ document.addEventListener("click", function (event) {
   // Checking if the button was clicked
   if (!event.target.matches("#livedatabutton")) return;
 
-  fetch('https://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/3224?res=daily&key=172d6a84-bef1-4394-8364-614b49ea678d')
+  fetch('http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/3224?res=daily&key=172d6a84-bef1-4394-8364-614b49ea678d')
     .then(response => response.json())
     .then(weatherData => {
       // Access the specific temperature value
@@ -31,7 +31,7 @@ document.addEventListener("click", function (event) {
       console.log('Error fetching weather data:', error);
     });
 
-    fetch('https://www.randomnumberapi.com/api/v1.0/random?min=20&max=70&count=1')
+    fetch('http://www.randomnumberapi.com/api/v1.0/random?min=20&max=70&count=1')
     .then(response => response.json())
     .then(gasPressureData => {
       // Access the specific gas pressure value
@@ -44,7 +44,7 @@ document.addEventListener("click", function (event) {
       console.log('Error fetching gas pressure data:', error);
     });
 
-    fetch('https://www.randomnumberapi.com/api/v1.0/random?min=10&max=20&count=1')
+    fetch('http://www.randomnumberapi.com/api/v1.0/random?min=10&max=20&count=1')
     .then(response => response.json())
     .then(gasTempData => {
       // Access the specific gas pressure value
@@ -57,7 +57,7 @@ document.addEventListener("click", function (event) {
       console.log('Error fetching gas temp data:', error);
     });
 
-    fetch('https://www.randomnumberapi.com/api/v1.0/random?min=0&max=100&count=1')
+    fetch('http://www.randomnumberapi.com/api/v1.0/random?min=0&max=100&count=1')
     .then(response => response.json())
     .then(gasBlendData => {
       // Access the specific gas pressure value
