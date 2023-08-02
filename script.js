@@ -69,9 +69,5 @@ document.addEventListener("click", function (event) {
     .catch(error => {
       console.log('Error fetching gas blend data:', error);
     });
-
-  // Scroll to the bottom of the page
-  const element = document.getElementById("gasBlendString");
-  element.scrollIntoView({ behavior: "smooth", block: "end" });
   
 });

@@ -1,58 +1,62 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
+<head>
     <title>FutureGrid CVDT Demo</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="styles.css" rel="stylesheet"/>
-  </head>
+    <link type="text/css" href="styles.css" rel="stylesheet" />
+</head>
 
-  <body>
-    <h1><span class="Future">Future</span><span class="Grid">Grid</span> CVDT Demonstrator</h1>
-    <h2>Phase 1 Site</h2>
+<body>
 
-    <!-- <model-viewer> HTML element -->
-      <model-viewer src="models/Site-v1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="imgs/fullsiteposter.webp" shadow-intensity="1" camera-orbit="12.29deg 70deg 6237m" field-of-view="19.95deg" auto-rotate>
-        <button class="Hotspot" slot="hotspot-1" data-position="1513.4048917774953m 7245.934356060397m -3075.444230533431m" data-normal="0.008443009708368749m 0.9987491931778667m -0.049282499060261775m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation"> <a href="blockvalve.html">Block Valve</a></div>
-        </button><button class="Hotspot" slot="hotspot-2" data-position="1911.669219840825m 7267.6440190429685m -1971.7837698512844m" data-normal="0m 1m 2.220446049250313e-16m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation"><a href="compression.html">Compression</a></div>
-        </button><button class="Hotspot" slot="hotspot-3" data-position="1937.912102782807m 7228.901707809501m -2840.710940761164m" data-normal="-0.18911236364823933m 0.9813040514026347m -0.03576132850093015m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation"><a href="lpreservoir.html">LP Reservoir</a></div>
-        </button><button class="Hotspot" slot="hotspot-4" data-position="1506.9938019702513m 7276.912503313116m -2381.2352313696806m" data-normal="-0.026100032856526578m 0.9887268206445435m 0.14743833430631575m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation"><a href="pressurereduction.html">Pressure Reduction</a></div>
-        </button><button class="Hotspot" slot="hotspot-5" data-position="1423.0578163343348m 7227.357778835569m -1864.7699365134317m" data-normal="-0.08165001329185122m 0.8837067908048765m 0.4608639530433978m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation"><a href="filtermeter.html">Filter Meter Area</a></div>
-        </button><button class="Hotspot" slot="hotspot-6" data-position="1152.424106271355m 7237.492551995508m -1969.2181589299043m" data-normal="-0.17407403564727028m -2.186545539770621e-16m 0.9847325678139589m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation"><a href="fcv.html">FCV</a></div>
-        </button><button class="Hotspot" slot="hotspot-7" data-position="1625.7351739242013m 7142.695042766918m -1325.9640767308488m" data-normal="-0.14661740730825662m 0.36847609152605043m 0.9180025630944014m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation"><a href="isolationvalves.html">Isolation Valves</a></div>
-        </button><button class="Hotspot" slot="hotspot-8" data-position="3239.6223574665655m 7145.789292562261m -1006.1346790139964m" data-normal="-0.12080389918023701m 0.5731573374352662m 0.8104918781128948m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation"><a href="hpreservoir.html">HP Reservoir</a></div>
-        </button>
-        <div class="progress-bar hide" slot="progress-bar">
+    <h1><span style="color:#79c200;">Future</span><span style="color:#00b2a2;">Grid</span> - Site Information</h1>
+  
+    <div class="flex-container">
+      <div class="model-viewer">
+        <h2>Model Viewer</h2>
+        <model-viewer src="models\Futuregrid.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="imgs\poster.webp" shadow-intensity="1" exposure="1" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 84deg auto" camera-orbit="101.1deg 56.5deg 255.8m" field-of-view="20.64deg">
+          <button class="Hotspot" slot="hotspot-1" data-position="64.34153979406778m 3.6802663283129124m 57.13333733014563m" data-normal="0.031056962326944347m 0.9906002561033648m -0.13321635672458124m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">HP Reservoir</div>
+          </button><button class="Hotspot" slot="hotspot-2" data-position="-0.912777631364122m 3.4620642941571074m 45.21885732726062m" data-normal="0.9874385189953989m -0.01597487458783565m 0.1571940666376326m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Isolation Valves</div>
+          </button><button class="Hotspot" slot="hotspot-3" data-position="-7.135323973507477m 6.678606501107463m 27.432523469228673m" data-normal="0.49255884115764514m 0.866314325995866m 0.08297756667778634m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Filter Meter Area</div>
+          </button><button class="Hotspot" slot="hotspot-4" data-position="-19.116434030213135m 8.464981931273297m 20.224419019978317m" data-normal="2.7151575301351296e-11m 1m -4.5239964494295304e-13m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">FCV</div>
+          </button><button class="Hotspot" slot="hotspot-5" data-position="-5.090431459567146m 8.108558821619042m 2.04296488354559m" data-normal="4.308021694302277e-8m 0.9999999999999979m 5.111281895344564e-8m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Pressure Reduction</div>
+          </button><button class="Hotspot" slot="hotspot-6" data-position="-5.680632534426778m 7.382675671707791m -23.378409716856115m" data-normal="0.0166487303714535m 0.9946158479281108m -0.10228457766087734m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Block Valve</div>
+          </button><button class="Hotspot" slot="hotspot-7" data-position="11.5977819896772m 6.652425041403397m -13.44805705426833m" data-normal="0.44816420341887386m 0.8909174857088707m 0.07358587114460419m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">LP Reservoir</div>
+          </button><button class="Hotspot" slot="hotspot-8" data-position="9.273737188673808m 8.246906553887907m 21.31697182084808m" data-normal="3.6618642431717404e-10m 0.9999999999999962m 8.742125586873942e-8m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Compression</div>
+          </button>
+          <div class="progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
-        </div>
-        <button slot="ar-button" id="ar-button">
+          </div>
+          <button slot="ar-button" id="ar-button">
             View in your space
-        </button>
-        <div id="ar-prompt">
+          </button>
+          <div id="ar-prompt">
             <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-        </div>
-    </model-viewer> 
-     <script src="script.js"></script>
-
-    <!-- Loads <model-viewer> for browsers: -->
+          </div>
+        </model-viewer>
+      </div>
+      <div class="asset-info">
+        <h2>Asset Information</h2>
+        <!-- Live Data Section -->
+        <button id="livedatabutton" type="button">Get Live Data</button>
+        <p id="temperatureString"></p>
+        <p id="gasPressureString"></p>
+        <p id="gasTempString"></p>
+        <p id="gasBlendString"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
-    
-    <!-- Live Data Section -->
-      <button id="livedatabutton" type='button'>Get Live Data</button>
-      <p id="temperatureString"></p>
-      <p id="gasPressureString"></p>
-      <p id="gasTempString"></p>
-      <p id="gasBlendString"></p>
-
   </body>
+
 </html>
