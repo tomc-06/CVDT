@@ -3,6 +3,7 @@
 
 <head>
     <title>FutureGrid CVDT Demo</title>
+    <link rel="icon" type="image/x-icon" href="imgs/NGT Sq Flame 32x32px.ico">
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +17,7 @@
     <div class="flex-container">
       <div class="model-viewer">
         <h2>Model Viewer</h2>
-        <model-viewer src="models\Futuregrid.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="imgs\poster.webp" shadow-intensity="1" exposure="1" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 84deg auto" camera-orbit="101.1deg 56.5deg 255.8m" field-of-view="20.64deg">
+        <model-viewer src="models/Futuregrid.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="imgs/poster.webp" shadow-intensity="1" exposure="1" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 84deg auto" camera-orbit="101.1deg 56.5deg 255.8m" field-of-view="20.64deg">
           <button class="Hotspot" slot="hotspot-1" data-position="64.34153979406778m 3.6802663283129124m 57.13333733014563m" data-normal="0.031056962326944347m 0.9906002561033648m -0.13321635672458124m" data-visibility-attribute="visible">
             <div class="HotspotAnnotation">HP Reservoir</div>
           </button><button class="Hotspot" slot="hotspot-2" data-position="-0.912777631364122m 3.4620642941571074m 45.21885732726062m" data-normal="0.9874385189953989m -0.01597487458783565m 0.1571940666376326m" data-visibility-attribute="visible">
@@ -49,14 +50,14 @@
         <h2>Asset Information</h2>
         <!-- Live Data Section -->
         <button id="livedatabutton" type="button">Get Live Data</button>
-        <p id="temperatureString"></p>
-        <p id="gasPressureString"></p>
-        <p id="gasTempString"></p>
-        <p id="gasBlendString"></p>
+        <p id="flowString"></p>
+        <p id="compString"></p>
+        <p id="pressString"></p>
+        <p id="tempString"></p>
       </div>
     </div>
-    <script src="script.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    <script src="script.js"></script>
   </body>
 
 </html>

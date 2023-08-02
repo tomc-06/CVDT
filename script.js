@@ -12,62 +12,23 @@ const onProgress = (event) => {
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
-//API 
+//API calls
 
 document.addEventListener("click", function (event) {
   // Checking if the button was clicked
   if (!event.target.matches("#livedatabutton")) return;
 
-  fetch('https://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/3224?res=daily&key=172d6a84-bef1-4394-8364-614b49ea678d')
+  fetch('http://cvdt-api.cfms.org.uk:8082/gateway/veracity/assets/1/dataChannels/1/latest?nLatest=1')
     .then(response => response.json())
-    .then(weatherData => {
-      // Access the specific temperature value
-      const temperature = weatherData.SiteRep.DV.Location.Period[0].Rep[0].Dm;
-      const temperatureString = 'Daily Max Ambient Temp = ' + temperature + ' °C';
-      // Display the temperature on the webpage
-      document.getElementById('temperatureString').textContent = temperatureString;
-    })
-    .catch(error => {
-      console.log('Error fetching weather data:', error);
-    });
+    .then(siteData => {
+      const flowString = `Gas flow = ${siteData[0].flow_m3ph} m^3/h`;
+      const compString = `Gas composition = ${siteData[0].h2_comp_pct} %`;
+      const pressString = `Gas pressure = ${siteData[0].pressure_barg} barg`;
+      const tempString = `Gas temperature = ${siteData[0].temperature_degC} °C`;
 
-    fetch('https://www.randomnumberapi.com/api/v1.0/random?min=20&max=70&count=1')
-    .then(response => response.json())
-    .then(gasPressureData => {
-      // Access the specific gas pressure value
-      const gasPressure = gasPressureData[0];
-      const gasPressureString = 'Current Gas Pressure = ' + gasPressure + ' bar';
-      // Display the gas pressure on the webpage
-      document.getElementById('gasPressureString').textContent = gasPressureString;
-    })
-    .catch(error => {
-      console.log('Error fetching gas pressure data:', error);
+      document.getElementById('flowString').textContent = flowString;
+      document.getElementById('compString').textContent = compString;
+      document.getElementById('pressString').textContent = pressString;
+      document.getElementById('tempString').textContent = tempString;
     });
-
-    fetch('https://www.randomnumberapi.com/api/v1.0/random?min=10&max=20&count=1')
-    .then(response => response.json())
-    .then(gasTempData => {
-      // Access the specific gas pressure value
-      const gasTemp = gasTempData[0];
-      const gasTempString = 'Current Gas Temp = ' + gasTemp + ' °C';
-      // Display the gas pressure on the webpage
-      document.getElementById('gasTempString').textContent = gasTempString;
-    })
-    .catch(error => {
-      console.log('Error fetching gas temp data:', error);
-    });
-
-    fetch('https://www.randomnumberapi.com/api/v1.0/random?min=0&max=100&count=1')
-    .then(response => response.json())
-    .then(gasBlendData => {
-      // Access the specific gas pressure value
-      const gasBlend = gasBlendData[0];
-      const gasBlendString = 'Current Gas Blend = ' + gasBlend + '% H2 in NG';
-      // Display the gas pressure on the webpage
-      document.getElementById('gasBlendString').textContent = gasBlendString;
-    })
-    .catch(error => {
-      console.log('Error fetching gas blend data:', error);
-    });
-  
-});
+  });
