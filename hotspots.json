@@ -1,0 +1,156 @@
+{
+  "site": "Spadeadam",
+  "models": [
+    {
+      "name": "Full Site Model",
+      "src": "models/Spadeadam-1-Pivot.glb",
+      "hotspots": [
+        {
+          "name": "HP Reservoir",
+          "data-position": [0.489, 0.018, 0.535],
+          "data-normal": [0.069, 0.917, -0.394]
+        },
+        {
+          "name": "Isolation Valves",
+          "data-position": [-0.168, 0.016, 0.416],
+          "data-normal": [0.000, 0.995, 0.100]
+        },
+        {
+          "name": "Filter Meter Area",
+          "data-position": [-0.263, 0.035, 0.233],
+          "data-normal": [0.025, 1.000, -0.005]
+        },
+        {
+          "name": "Flow Control Valve",
+          "data-position": [-0.351, 0.064, 0.165],
+          "data-normal": [0.990, -0.010, -0.139]
+        },
+        {
+          "name": "Pressure Reduction",
+          "data-position": [-0.217, 0.063, -0.019],
+          "data-normal": [0.00, 1.00, 0.00]
+        },
+        {
+          "name": "Block Valve",
+          "data-position": [-0.215, 0.055, -0.269],
+          "data-normal": [-0.017, 0.995, 0.102]
+        },
+        {
+          "name": "LP Reservoir",
+          "data-position": [-0.043, 0.049, -0.187],
+          "data-normal": [0.156, 0.987, 0.024]
+        },
+        {
+          "name": "Compression",
+          "data-position": [-0.064, 0.064, 0.169],
+          "data-normal": [0.000, 1.000, 0.000]
+        }
+      ]
+    },
+    {
+      "name":"HP Reservoir",
+      "src": "models/HPReservoir-v1.glb",
+      "hotspots": []
+    },
+    {
+      "name":"Isolation Valves",
+      "src": "models/ICIIsolation-v1.glb",
+      "hotspots": [
+        {
+          "name": "Ball Valve 1",
+          "data-position": [1661.756, 7157.377, -1322.578],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "Ball Valve 2",
+          "data-position": [1578.518, 7158.727, -1335.324],
+          "data-normal": [0, 1, 0]
+        }
+      ]
+    },
+    {
+      "name":"Filter Meter Area",
+      "src": "models/FilterMeterArea-v1.glb",
+      "hotspots": [
+        {
+          "name": "Meter Skid",
+          "data-position": [1285.0832, 7241.227, -1884.420],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "Filter Skid",
+          "data-position": [1503.199, 7251.781, -1737.063],
+          "data-normal": [0, 1, 0]
+        }
+      ]
+    },
+    {
+      "name":"Flow Control Valve",
+      "src": "models/EnronFCV-v1.glb",
+      "hotspots": [
+        {
+          "name": "FCV",
+          "data-position": [1150.223, 7273.181, -1973.167],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "NRV",
+          "data-position": [1162.361, 7230.449, -2045.379],
+          "data-normal": [0, 1, 0]
+        }
+      ]
+    },
+    {
+      "name":"Pressure Reduction",
+      "src": "models/Hays-v1.glb",
+      "hotspots": [
+        {
+          "name": "Filters",
+          "data-position": [1389.843, 7231.642, -2648.716],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "Meter Skid",
+          "data-position": [1358.578, 7230.379, -2492.314],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "Heat Exchanger",
+          "data-position": [1418.924, 7233.663, -2345.411],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "Boiler LDU",
+          "data-position": [1493.152, 7224.481, -2426.382],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "Pressure Reduction",
+          "data-position": [1528.632, 7230.343, -2409.275],
+          "data-normal": [0, 1, 0]
+        }
+      ]
+    },
+    {
+      "name":"Block Valve",
+      "src": "models/Lanark-v3.glb",
+      "hotspots": [
+        {
+          "name": "Ball Valve",
+          "data-position": [1509.989, 7245.856, -3071.759],
+          "data-normal": [0, 1, 0]
+        }
+      ]
+    },
+    {
+      "name":"LP Reservoir",
+      "src": "models/LPReservoir-v1.glb",
+      "hotspots": []
+    },
+    {
+      "name":"Compression",
+      "src": "models/Full Recompression Line-v1.glb",
+      "hotspots": []
+    }
+  ]
+}

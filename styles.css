@@ -36,17 +36,12 @@ h2 {
 }
 
 .model-viewer p {
-  color: blue;
+  color: black;
   background: #909090;
 }
 
 .asset-info p {
   color: white;
-}
-
-
-:not(:defined)>* {
-  display: none;
 }
 
 model-viewer {
@@ -56,6 +51,11 @@ model-viewer {
 }
 
 /* Model Viewer Styles */
+
+:not(:defined)>* {
+  display: none;
+}
+
 .progress-bar {
   display: block;
   width: 33%;
@@ -83,6 +83,20 @@ model-viewer {
   border-radius: 25px;
   float: left;
   transition: width 0.3s;
+}
+
+.annotation{
+  background-color: #00b2a2;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  position: absolute;
+  transform: translate(10px, 10px);
+  border-radius: 6px;
+  padding: 6px 16px;
 }
 
 #ar-button {
@@ -160,7 +174,6 @@ model-viewer>#ar-prompt>img {
   background-color: #00b2a2;
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -174,37 +187,23 @@ model-viewer>#ar-prompt>img {
   left: 50%;
   transform: translateX(-50%);
   top: 5px;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
 }
 
-#livedatabutton:focus:not(:focus-visible):not(.focus-visible) {
-  box-shadow: none;
-  outline: none;
-}
-
-#livedatabutton:hover {
-  background-color: #029689;
-}
-
-#livedatabutton:focus {
-  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
-  outline: none;
-}
-
-#livedatabutton:disabled {
-  background-color: #94d3a2;
-  border-color: rgba(27, 31, 35, .1);
-  color: rgba(255, 255, 255, .8);
-  cursor: default;
-}
-
-#livedatabutton:active {
-  background-color: rgba(46, 164, 79, .4);
-  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+#siteoverviewbutton {
+  appearance: none;
+  background-color: #00b2a2;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: absolute;
+  transform: translate(10px, 10px);
+  top: 5px;
 }

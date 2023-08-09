@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>FutureGrid CVDT Demo</title>
+    <title>FutureGrid CVDT Site Information</title>
     <link rel="icon" type="image/x-icon" href="imgs/NGT Sq Flame 32x32px.ico">
     <meta charset="utf-8">
-    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="description" content="FutureGrid Site Information">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="styles.css" rel="stylesheet" />
 </head>
@@ -17,38 +17,18 @@
     <div class="flex-container">
       <div class="model-viewer">
         <h2>Model Viewer</h2>
-        <model-viewer src="models/Futuregrid.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="imgs/poster.webp" shadow-intensity="1" exposure="1" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 84deg auto" camera-orbit="101.1deg 56.5deg 255.8m" field-of-view="20.64deg">
-          <button class="Hotspot" slot="hotspot-1" data-position="64.34153979406778m 3.6802663283129124m 57.13333733014563m" data-normal="0.031056962326944347m 0.9906002561033648m -0.13321635672458124m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">HP Reservoir</div>
-          </button><button class="Hotspot" slot="hotspot-2" data-position="-0.912777631364122m 3.4620642941571074m 45.21885732726062m" data-normal="0.9874385189953989m -0.01597487458783565m 0.1571940666376326m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Isolation Valves</div>
-          </button><button class="Hotspot" slot="hotspot-3" data-position="-7.135323973507477m 6.678606501107463m 27.432523469228673m" data-normal="0.49255884115764514m 0.866314325995866m 0.08297756667778634m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Filter Meter Area</div>
-          </button><button class="Hotspot" slot="hotspot-4" data-position="-19.116434030213135m 8.464981931273297m 20.224419019978317m" data-normal="2.7151575301351296e-11m 1m -4.5239964494295304e-13m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">FCV</div>
-          </button><button class="Hotspot" slot="hotspot-5" data-position="-5.090431459567146m 8.108558821619042m 2.04296488354559m" data-normal="4.308021694302277e-8m 0.9999999999999979m 5.111281895344564e-8m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Pressure Reduction</div>
-          </button><button class="Hotspot" slot="hotspot-6" data-position="-5.680632534426778m 7.382675671707791m -23.378409716856115m" data-normal="0.0166487303714535m 0.9946158479281108m -0.10228457766087734m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Block Valve</div>
-          </button><button class="Hotspot" slot="hotspot-7" data-position="11.5977819896772m 6.652425041403397m -13.44805705426833m" data-normal="0.44816420341887386m 0.8909174857088707m 0.07358587114460419m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">LP Reservoir</div>
-          </button><button class="Hotspot" slot="hotspot-8" data-position="9.273737188673808m 8.246906553887907m 21.31697182084808m" data-normal="3.6618642431717404e-10m 0.9999999999999962m 8.742125586873942e-8m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Compression</div>
-          </button>
-          <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
-          </div>
+        <model-viewer src="models\Spadeadam-1-Pivot.glb" model-name="Full Site Model" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1"  min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 85deg auto" camera-orbit="820.00deg 60.00deg 2.745m" field-of-view="18.05deg">
+          <button id="siteoverviewbutton" type="button">Site Overview</button>
           <button slot="ar-button" id="ar-button">
             View in your space
           </button>
           <div id="ar-prompt">
-            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+            <img src="imgs\ar_hand_prompt.png">
           </div>
         </model-viewer>
       </div>
       <div class="asset-info">
         <h2>Asset Information</h2>
-        <!-- Live Data Section -->
         <button id="livedatabutton" type="button">Get Live Data</button>
         <p id="flowString"></p>
         <p id="compString"></p>
