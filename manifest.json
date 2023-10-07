@@ -1,0 +1,16 @@
+{
+  "name": "FutureGrid Viewer",
+  "short_name": "CVDT",
+  "description": "A model viewer to show the FutureGrid facility.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#000",
+  "icons": [
+    {
+      "src": "imgs/NGT Sq Flame 32x32px-3.png",
+      "sizes": "32x32px",
+      "type": "image/png"
+    }
+  ]
+}

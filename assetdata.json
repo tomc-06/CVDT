@@ -1,0 +1,165 @@
+{
+  "site": "Spadeadam",
+  "models": [
+    {
+      "name": "Site Overview",
+      "description": "In Gas Transmission, our journey to net zero focuses primarily on the ways that hydrogen could be used to replace natural gas, and is one of the most important economic, technical, and social challenges faced by the business. The FutureGrid project is the first of many steps towards a full-scale conversion of the existing National Transmission System (NTS) to transport hydrogen. The Phase 1 FutureGrid test facility is constructed largely from decommissioned assets that will be used to carry out a wide range of hydrogen tests in an offline environment to demonstrate the National Transmission System's ability to transport hydrogen safely and reliably.",
+      "src": "models/Spadeadam-1-Pivot.glb",
+      "hotspots": [
+        {
+          "name": "HP Reservoir",
+          "data-position": [0.489, 0.018, 0.535],
+          "data-normal": [0.069, 0.917, -0.394]
+        },
+        {
+          "name": "Isolation Valves",
+          "data-position": [-0.168, 0.016, 0.416],
+          "data-normal": [0.0, 0.995, 0.1]
+        },
+        {
+          "name": "Filter Meter Area",
+          "data-position": [-0.263, 0.035, 0.233],
+          "data-normal": [0.025, 1.0, -0.005]
+        },
+        {
+          "name": "Flow Control Valve",
+          "data-position": [-0.351, 0.064, 0.165],
+          "data-normal": [0.99, -0.01, -0.139]
+        },
+        {
+          "name": "Pressure Reduction",
+          "data-position": [-0.217, 0.063, -0.019],
+          "data-normal": [0.0, 1.0, 0.0]
+        },
+        {
+          "name": "Block Valve",
+          "data-position": [-0.215, 0.055, -0.269],
+          "data-normal": [-0.017, 0.995, 0.102]
+        },
+        {
+          "name": "LP Reservoir",
+          "data-position": [-0.043, 0.049, -0.187],
+          "data-normal": [0.156, 0.987, 0.024]
+        },
+        {
+          "name": "Compression",
+          "data-position": [-0.064, 0.064, 0.169],
+          "data-normal": [0.0, 1.0, 0.0]
+        }
+      ]
+    },
+    {
+      "name": "HP Reservoir",
+      "description": "The HP reservoir is a large vessel used to store the natural gas / hydrogen for the system. It is constructed from 1200NB carbon steel pipe and includes a fill point for offloading from a tanker. Pressure and temperature indication is installed on the reservoir.",
+      "src": "models/HPReservoir-v1.glb",
+      "hotspots": []
+    },
+    {
+      "name": "Isolation Valves",
+      "description": "The isolation valves are two 450NB actuated ball valves with a vent point in between and a 50NB bridle around. The valves originated from the Billingham ICI offtake site and have seen a number of years natural gas service.",
+      "src": "models/ICIIsolation-v1.glb",
+      "hotspots": [
+        {
+          "name": "Ball Valve 1",
+          "data-position": [1661.756, 7157.377, -1322.578],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "Ball Valve 2",
+          "data-position": [1578.518, 7158.727, -1335.324],
+          "data-normal": [0, 1, 0]
+        }
+      ]
+    },
+    {
+      "name": "Filter Meter Area",
+      "description": "The filter meter area consists of a 450NB filter and an 80NB meter skid. The filter is a t-type filter which orignated from the Enron Billingham offtake site. It has differential pressure indication across it. The filter can be isolated using the two 450NB isolation plug valves. The 80NB meter skid consists of twin stream ultrasonic flow meters with stream isolation. This skid originated from National Gas' Eakring Training Facility.",
+      "src": "models/FilterMeterArea-v1.glb",
+      "hotspots": [
+        {
+          "name": "Meter Skid",
+          "data-position": [1285.0832, 7241.227, -1884.42],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "Filter Skid",
+          "data-position": [1503.199, 7251.781, -1737.063],
+          "data-normal": [0, 1, 0]
+        }
+      ]
+    },
+    {
+      "name": "Flow Control Valve",
+      "description": "This area includes a 450NB Flow Control followed by a 450NB Non-Return Valve, both of these valves originated from the Enron Billingham Offtake site. These allow for control of the flow around the site whilst preventing reverse flow.",
+      "src": "models/EnronFCV-v1.glb",
+      "hotspots": [
+        {
+          "name": "FCV",
+          "data-position": [1150.223, 7273.181, -1973.167],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "NRV",
+          "data-position": [1162.361, 7230.449, -2045.379],
+          "data-normal": [0, 1, 0]
+        }
+      ]
+    },
+    {
+      "name": "Pressure Reduction",
+      "description": "The pressure reduction area is representative of a typical Pressure Regulating Installation. This includes filtration, metering, pre-heat (through modular boilers and heat exchangers), and finally pressure reduction. All the assets in this area originated from National Gas' Hays Chemicals site.",
+      "src": "models/Hays-v1.glb",
+      "hotspots": [
+        {
+          "name": "Filters",
+          "data-position": [1389.843, 7231.642, -2648.716],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "Meter Skid",
+          "data-position": [1358.578, 7230.379, -2492.314],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "Heat Exchanger",
+          "data-position": [1418.924, 7233.663, -2345.411],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "Boiler LDU",
+          "data-position": [1493.152, 7224.481, -2426.382],
+          "data-normal": [0, 1, 0]
+        },
+        {
+          "name": "Pressure Reduction",
+          "data-position": [1528.632, 7230.343, -2409.275],
+          "data-normal": [0, 1, 0]
+        }
+      ]
+    },
+    {
+      "name": "Block Valve",
+      "description": "This section represents a typical above ground block valve installation. Block valves are used to isolate a section of a pipeline and typically comprise of a main line isolation valve, in this case 900NB ball valve, and a suitably sized bridle, in this case 450NB.",
+      "src": "models/Lanark-v3.glb",
+      "hotspots": [
+        {
+          "name": "Ball Valve",
+          "data-position": [1509.989, 7245.856, -3071.759],
+          "data-normal": [0, 1, 0]
+        }
+      ]
+    },
+    {
+      "name": "LP Reservoir",
+      "description": "The LP reservoir is a large vessel used to store the natural gas / hydrogen for the system. It is constructed from 900NB carbon steel pipe. Pressure and temperature indication is installed on the reservoir.",
+      "src": "models/LPReservoir-v1.glb",
+      "hotspots": []
+    },
+    {
+      "name": "Compression",
+      "description": "The re-compression unit generates gas flows around the facility. This unit has been designed for the FutureGrid facility, to operate with natural gas and hydrogen at a wide range of flow rates and pressures to replicate the national transmission system.",
+      "src": "models/Full Recompression Line-v1.glb",
+      "hotspots": []
+    }
+  ]
+}

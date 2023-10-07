@@ -1,0 +1,41 @@
+{
+  "site": "Spadeadam",
+  "models": [
+    {
+      "name": "Site Overview",
+      "src": "models/Spadeadam-1-Pivot.glb",
+      "hotspots": [
+        {
+          "name": "Flow",
+          "ref": "flow_m3ph",
+          "data-position": [0.295, 0.047, 0.205],
+          "data-normal": [0.0, 1.0, 0.0]
+        },
+        {
+          "name": "Composition",
+          "ref": "h2_comp_pct",
+          "data-position": [0.484, 0.017, 0.531],
+          "data-normal": [0.0, 1.0, 0.0]
+        },
+        {
+          "name": "Pressure1",
+          "ref": "pressure_barg",
+          "data-position": [0.286, 0.053, -0.23],
+          "data-normal": [0.0, 1.0, 0.0]
+        },
+        {
+          "name": "Pressure2",
+          "ref": "pressure_barg",
+          "data-position": [0.173, 0.04, -0.049],
+          "data-normal": [0.0, 1.0, 0.0]
+        },
+        {
+          "name": "Temperature",
+          "ref": "temperature_degC",
+          "data-position": [0.222, 0.049, 0.023],
+          "data-normal": [0.0, 1.0, 0.0]
+        }
+      ]
+    }
+  ]
+}

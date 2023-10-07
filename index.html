@@ -1,43 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>FutureGrid CVDT Site Information</title>
-    <link rel="icon" type="image/x-icon" href="imgs/NGT Sq Flame 32x32px.ico">
-    <meta charset="utf-8">
-    <meta name="description" content="FutureGrid Site Information">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="imgs/NGT Sq Flame 32x32px.ico" />
+    <meta charset="utf-8" />
+    <meta name="description" content="FutureGrid Site Information" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link type="text/css" href="styles.css" rel="stylesheet" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="manifest" href="/manifest.json" />
+  </head>
 
-<body>
+  <body ontouchstart="">
+    <h1>
+      <span style="color: #79c200">Future</span
+      ><span style="color: #00b2a2">Grid</span> - Site Information
+    </h1>
 
-    <h1><span style="color:#79c200;">Future</span><span style="color:#00b2a2;">Grid</span> - Site Information</h1>
-  
     <div class="flex-container">
       <div class="model-viewer">
-        <h2>Model Viewer</h2>
-        <model-viewer src="models\Spadeadam-1-Pivot.glb" model-name="Full Site Model" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1"  min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 85deg auto" camera-orbit="820.00deg 60.00deg 2.745m" field-of-view="18.05deg">
+        <div class="top-bar">
+          <div class="item1">
+            <h2 class="loaded-model">Loaded Model:</h2>
+          </div>
+          <div class="item2">
+            <h2 id="areaName">Area Name</h2>
+          </div>
+          <div class="item3">
+            <button id="qr-code-button" class="qr-code-button">
+              <span class="material-symbols-outlined">
+                <span id="icon">qr_code_scanner</span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div id="qrscanner" class="qrscanner">
+          <div id="reader" width="600px"></div>
+        </div>
+        <model-viewer
+          src="models\Spadeadam-1-Pivot.glb"
+          model-name="Full Site Model"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          shadow-intensity="1"
+          min-camera-orbit="auto 0deg auto"
+          max-camera-orbit="auto 85deg auto"
+          camera-orbit="820.00deg 60.00deg 2.745m"
+          field-of-view="18.05deg"
+        >
           <button id="siteoverviewbutton" type="button">Site Overview</button>
-          <button slot="ar-button" id="ar-button">
-            View in your space
-          </button>
+          <button slot="ar-button" id="ar-button">View in your space</button>
           <div id="ar-prompt">
-            <img src="imgs\ar_hand_prompt.png">
+            <img src="imgs\ar_hand_prompt.png" />
           </div>
         </model-viewer>
       </div>
       <div class="asset-info">
-        <h2>Asset Information</h2>
-        <button id="livedatabutton" type="button">Get Live Data</button>
-        <p id="flowString"></p>
-        <p id="compString"></p>
-        <p id="pressString"></p>
-        <p id="tempString"></p>
+        <ul class="navigation">
+          <li><a id="info-link" class="active" href="#info">Info</a></li>
+          <li><a id="asset-link" href="#asset">Asset</a></li>
+          <li><a id="data-link" href="#data">Data</a></li>
+        </ul>
+
+        <div id="info-section">
+          <h2 id="infoTitle"></h2>
+          <p id="infoContent"></p>
+        </div>
+        <div id="asset-section">
+          <h2>Asset Info Content</h2>
+        </div>
+        <div id="data-section">
+          <h2>Data Section Content</h2>
+          <button id="livedatabutton" type="button">
+            <span class="material-symbols-outlined">
+              <span id="icon2">query_stats</span>
+            </span>
+            <span id="livedatabuttonstring">Get Live Data</span>
+          </button>
+          <div id="livedatastrings">
+            <p id="flowString"></p>
+            <p id="compString"></p>
+            <p id="pressString"></p>
+            <p id="tempString"></p>
+          </div>
+        </div>
       </div>
     </div>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
     <script src="script.js"></script>
+    <script
+      src="https://unpkg.com/html5-qrcode"
+      type="text/javascript"
+    ></script>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"
+    ></script>
   </body>
-
 </html>
