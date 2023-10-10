@@ -8,6 +8,7 @@ const urlsToCache = [
   "./sensorposition.json",
   "./manifest.json",
   "./imgs/NGT Sq Flame 32x32px.ico",
+  "./imgs/apple-touch-icon-80x80.png",
   "./imgs/ar_hand_prompt.png",
   "./imgs/ar_icon.png",
   "./models/EnronFCV-v1.glb",
