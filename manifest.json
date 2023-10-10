@@ -8,8 +8,8 @@
   "theme_color": "#000",
   "icons": [
     {
-      "src": "imgs/NGT Sq Flame 32x32px-3.png",
-      "sizes": "32x32px",
+      "src": "imgs/apple-touch-icon-80x80.png",
+      "sizes": "180x180px",
       "type": "image/png"
     }
   ]
