@@ -18,7 +18,7 @@ function updateElementContentById(elementId, content) {
   }
 }
 
-// Fetching JSON data
+// Fetching JSON data and updating asset tab content
 document.addEventListener("DOMContentLoaded", function () {
   fetch("assetdata.json")
     .then(response => response.json())
@@ -27,15 +27,34 @@ document.addEventListener("DOMContentLoaded", function () {
       const models = data.models;
       const currentModel = models.find(model => model.name === "Site Overview");
 
-      // Update Asset tab content
-      let assetInfoContent = `<h2>${currentModel.name} Info Content</h2>`;
-      assetInfoContent += `<p>Nominal Diameter: ${currentModel.NominalDiameter}</p>`;
-      assetInfoContent += `<p>Material Grade: ${currentModel.MaterialGrade}</p>`;
-      assetInfoContent += `<p>Design Standard: ${currentModel.DesignStandard}</p>`;
-      assetInfoContent += `<p>Pressure Class: ${currentModel.PressureClass}</p>`;
-      assetInfoContent += `<p>Commission Date: ${currentModel.ComissionDate}</p>`;
+      // Update Asset tab content function
+      const updateAssetTabContent = (modelIndex) => {
+        const currentModel = models[modelIndex];
 
-      assetSection.innerHTML = assetInfoContent;
+        // Update Asset tab content
+        let assetInfoContent = `<h2>${currentModel.name} Info Content</h2>`;
+        assetInfoContent += `<p>Nominal Diameter: ${currentModel.NominalDiameter}</p>`;
+        assetInfoContent += `<p>Material Grade: ${currentModel.MaterialGrade}</p>`;
+        assetInfoContent += `<p>Design Standard: ${currentModel.DesignStandard}</p>`;
+        assetInfoContent += `<p>Pressure Class: ${currentModel.PressureClass}</p>`;
+        assetInfoContent += `<p>Commission Date: ${currentModel.ComissionDate}</p>`;
+
+        assetSection.innerHTML = assetInfoContent;
+      };
+
+      // Initial update
+      updateAssetTabContent(0);
+
+      // Event listener for hotspot buttons
+      modelViewer.addEventListener("click", (event) => {
+        if (event.target.classList.contains("Hotspot")) {
+          const hotspotName = event.target.textContent.trim();
+          const modelIndex = models.findIndex(model => model.name === hotspotName);
+          if (modelIndex !== -1) {
+            updateAssetTabContent(modelIndex);
+          }
+        }
+      });
     })
     .catch(error => {
       console.error('Error fetching data:', error);
@@ -211,6 +230,14 @@ const loadModel = (index) => {
   updateElementContentById("areaName", assetData.models[index].name);
   updateElementContentById("infoTitle", assetData.models[index].name);
   updateElementContentById("infoContent", assetData.models[index].description);
+
+  // Update asset details in the "asset" tab
+  const asset = assetData.models[index];
+  updateElementContentById("nominal-diameter", asset.NominalDiameter);
+  updateElementContentById("material-grade", asset.MaterialGrade);
+  updateElementContentById("design-standard", asset.DesignStandard);
+  updateElementContentById("pressure-class", asset.PressureClass);
+  updateElementContentById("commission-date", asset.ComissionDate);
 };
 
 // Load a model by name and update hotspots
@@ -221,20 +248,6 @@ const loadModelByName = (modelName) => {
   if (modelIndex !== -1) {
     loadModel(modelIndex);
     updateHotspots();
-    updateElementContentById("areaName", assetData.models[modelIndex].name);
-    updateElementContentById("infoTitle", assetData.models[modelIndex].name);
-    updateElementContentById(
-      "infoContent",
-      assetData.models[modelIndex].description
-    );
-
-    // Update asset details in the "asset" tab
-    const asset = assetData.models[modelIndex];
-    updateElementContentById("nominal-diameter", asset.NominalDiameter);
-    updateElementContentById("material-grade", asset.MaterialGrade);
-    updateElementContentById("design-standard", asset.DesignStandard);
-    updateElementContentById("pressure-class", asset.PressureClass);
-    updateElementContentById("commission-date", asset.ComissionDate);
   }
 };
 
