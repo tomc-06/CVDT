@@ -203,8 +203,25 @@ const loadModelByName = (modelName) => {
       "infoContent",
       assetData.models[modelIndex].description
     );
+ // Update asset details in the "asset" tab
+ const asset = assetData.models[modelIndex];
+ updateElementContentById("nominal-diameter", asset.NominalDiameter);
+ updateElementContentById("material-grade", asset.MaterialGrade);
+ updateElementContentById("design-standard", asset.DesignStandard);
+ updateElementContentById("pressure-class", asset.PressureClass);
+ updateElementContentById("commission-date", asset.ComissionDate);
+
   }
 };
+
+function updateElementContentById(elementId, content) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.textContent = content;
+  } else {
+    console.warn(`Element with ID ${elementId} not found.`);
+  }
+}
 
 //Updates hotspot annotations
 const updateHotspots = () => {
