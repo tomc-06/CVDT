@@ -18,6 +18,30 @@ function updateElementContentById(elementId, content) {
   }
 }
 
+// Fetching JSON data
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("assetdata.json")
+    .then(response => response.json())
+    .then(data => {
+      const assetSection = document.getElementById("asset-section");
+      const models = data.models;
+      const currentModel = models.find(model => model.name === "Site Overview");
+
+      // Update Asset tab content
+      let assetInfoContent = `<h2>${currentModel.name} Info Content</h2>`;
+      assetInfoContent += `<p>Nominal Diameter: ${currentModel.NominalDiameter}</p>`;
+      assetInfoContent += `<p>Material Grade: ${currentModel.MaterialGrade}</p>`;
+      assetInfoContent += `<p>Design Standard: ${currentModel.DesignStandard}</p>`;
+      assetInfoContent += `<p>Pressure Class: ${currentModel.PressureClass}</p>`;
+      assetInfoContent += `<p>Commission Date: ${currentModel.ComissionDate}</p>`;
+
+      assetSection.innerHTML = assetInfoContent;
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+});
+
 // QR CODE SCANNER
 document.getElementById("qr-code-button").addEventListener("click", showhideQR);
 let html5QrcodeScanner;
