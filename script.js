@@ -18,7 +18,7 @@ function updateElementContentById(elementId, content) {
   }
 }
 
-//QR CODE SCANNER
+// QR CODE SCANNER
 document.getElementById("qr-code-button").addEventListener("click", showhideQR);
 let html5QrcodeScanner;
 
@@ -76,7 +76,7 @@ function showhideQR() {
   }
 }
 
-//DATA TABS
+// DATA TABS
 // Get references to the navigation links and sections
 const infoLink = document.getElementById("info-link");
 const assetLink = document.getElementById("asset-link");
@@ -113,7 +113,7 @@ dataLink.addEventListener("click", function () {
 
 showSection(infoSection, infoLink);
 
-//Live data button click
+// Live data button click
 
 document.getElementById("livedatabutton").addEventListener("click", () => {
   const x = document.getElementById("livedatastrings");
@@ -154,12 +154,12 @@ document.getElementById("livedatabutton").addEventListener("click", () => {
   }
 });
 
-//MODEL DATA
+// MODEL DATA
 const modelViewer = document.querySelector("model-viewer");
 let currentModel = 0; // Index of the current model
 let assetData; // To store the hotspots data
 
-//Initial load
+// Initial load
 
 fetch("assetdata.json")
   .then((response) => {
@@ -170,7 +170,7 @@ fetch("assetdata.json")
   })
   .then((data) => {
     assetData = data;
-    loadModel(0); //need to make sure 0 is site overview model or change this value
+    loadModel(0); // need to make sure 0 is site overview model or change this value
     updateHotspots();
     updateElementContentById("areaName", assetData.models[0].name);
     updateElementContentById("infoTitle", assetData.models[0].name);
@@ -180,7 +180,7 @@ fetch("assetdata.json")
     console.error("Fetch error: ", error.message);
   });
 
-//Load a model by index and update hotspots
+// Load a model by index and update hotspots
 const loadModel = (index) => {
   modelViewer.setAttribute("src", assetData.models[index].src);
   currentModel = index;
@@ -203,35 +203,26 @@ const loadModelByName = (modelName) => {
       "infoContent",
       assetData.models[modelIndex].description
     );
- // Update asset details in the "asset" tab
- const asset = assetData.models[modelIndex];
- updateElementContentById("nominal-diameter", asset.NominalDiameter);
- updateElementContentById("material-grade", asset.MaterialGrade);
- updateElementContentById("design-standard", asset.DesignStandard);
- updateElementContentById("pressure-class", asset.PressureClass);
- updateElementContentById("commission-date", asset.ComissionDate);
 
+    // Update asset details in the "asset" tab
+    const asset = assetData.models[modelIndex];
+    updateElementContentById("nominal-diameter", asset.NominalDiameter);
+    updateElementContentById("material-grade", asset.MaterialGrade);
+    updateElementContentById("design-standard", asset.DesignStandard);
+    updateElementContentById("pressure-class", asset.PressureClass);
+    updateElementContentById("commission-date", asset.ComissionDate);
   }
 };
 
-function updateElementContentById(elementId, content) {
-  const element = document.getElementById(elementId);
-  if (element) {
-    element.textContent = content;
-  } else {
-    console.warn(`Element with ID ${elementId} not found.`);
-  }
-}
-
-//Updates hotspot annotations
+// Updates hotspot annotations
 const updateHotspots = () => {
   const hotspots = assetData.models[currentModel].hotspots;
 
-  //Clears any existing hotspots
+  // Clears any existing hotspots
   modelViewer.querySelectorAll(".Hotspot").forEach((element) => {
     element.remove();
   });
-  //Creates new hotspots
+  // Creates new hotspots
   hotspots.forEach((hotspot, index) => {
     const button = document.createElement("button");
     button.className = "Hotspot";
@@ -246,7 +237,7 @@ const updateHotspots = () => {
 
     button.appendChild(annotation);
 
-    //Switches model to match annotation clicked
+    // Switches model to match annotation clicked
     button.addEventListener("click", () => {
       const hotspotModelName = hotspot.name;
       const modelIndex = assetData.models.findIndex(
@@ -263,7 +254,7 @@ const updateHotspots = () => {
   });
 };
 
-//Site Overview button click
+// Site Overview button click
 document.getElementById("siteoverviewbutton").addEventListener("click", () => {
   currentModel = 0;
   loadModel(currentModel);
