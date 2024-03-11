@@ -1,165 +1,445 @@
 {
-  "site": "Spadeadam",
-  "models": [
-    {
-      "name": "Site Overview",
-      "description": "In Gas Transmission, our journey to net zero focuses primarily on the ways that hydrogen could be used to replace natural gas, and is one of the most important economic, technical, and social challenges faced by the business. The FutureGrid project is the first of many steps towards a full-scale conversion of the existing National Transmission System (NTS) to transport hydrogen. The Phase 1 FutureGrid test facility is constructed largely from decommissioned assets that will be used to carry out a wide range of hydrogen tests in an offline environment to demonstrate the National Transmission System's ability to transport hydrogen safely and reliably.",
-      "src": "models/Spadeadam-1-Pivot.glb",
-      "hotspots": [
+    "site": "Spadeadam",
+    "models": [
         {
-          "name": "HP Reservoir",
-          "data-position": [0.489, 0.018, 0.535],
-          "data-normal": [0.069, 0.917, -0.394]
+            "name": "Site Overview",
+            "description": "The FutureGrid Phase 1 test facility is constructed largely from decommissioned assets and aims to demonstrate that the Gas National Transmission System (NTS) can be repurposed to transport hydrogen safely and reliably. This initial phase involves building an offline hydrogen test facility, to assess the impact that blends of hydrogen will have on NTS assets.",
+            "src": "models/Spadeadam-1-Pivot.glb",
+            "NominalDiameter": "",
+            "MaterialGrade": "",
+            "DesignStandard": "IGEM/TD/13",
+            "PressureClass": 600,
+            "ComissionDate": 2022,
+            "hotspots": [
+                {
+                    "name": "HP Reservoir",
+                    "description": "",
+                    "data-position": [
+                        0.489,
+                        0.018,
+                        0.535
+                    ],
+                    "data-normal": [
+                        0.069,
+                        0.917,
+                        -0.394
+                    ]
+                },
+                {
+                    "name": "Isolation Valves",
+                    "description": "",
+                    "data-position": [
+                        -0.168,
+                        0.016,
+                        0.416
+                    ],
+                    "data-normal": [
+                        0,
+                        0.995,
+                        0.1
+                    ]
+                },
+                {
+                    "name": "Filter Meter Area",
+                    "description": "",
+                    "data-position": [
+                        -0.263,
+                        0.035,
+                        0.233
+                    ],
+                    "data-normal": [
+                        0.025,
+                        1,
+                        -0.005
+                    ]
+                },
+                {
+                    "name": "Flow Control Valve",
+                    "description": "",
+                    "data-position": [
+                        -0.351,
+                        0.064,
+                        0.165
+                    ],
+                    "data-normal": [
+                        0.99,
+                        -0.01,
+                        -0.139
+                    ]
+                },
+                {
+                    "name": "Pressure Reduction",
+                    "description": "",
+                    "data-position": [
+                        -0.217,
+                        0.063,
+                        -0.019
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "name": "Block Valve",
+                    "description": "",
+                    "data-position": [
+                        -0.215,
+                        0.055,
+                        -0.269
+                    ],
+                    "data-normal": [
+                        -0.017,
+                        0.995,
+                        0.102
+                    ]
+                },
+                {
+                    "name": "LP Reservoir",
+                    "description": "",
+                    "data-position": [
+                        -0.043,
+                        0.049,
+                        -0.187
+                    ],
+                    "data-normal": [
+                        0.156,
+                        0.987,
+                        0.024
+                    ]
+                },
+                {
+                    "name": "Compression",
+                    "description": "",
+                    "data-position": [
+                        -0.064,
+                        0.064,
+                        0.169
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ]
+                }
+            ]
         },
         {
-          "name": "Isolation Valves",
-          "data-position": [-0.168, 0.016, 0.416],
-          "data-normal": [0.0, 0.995, 0.1]
+            "name": "HP Reservoir",
+            "description": "The high pressure storage reservoir is constructed from large diameter pipe that acts as a storage reservoir for the test facility. Gas in the form of natural gas or hydrogen, or a specific blend of both, is stored in the high pressure store at 70 bar. This then connects to the facility and provides the gas required to conduct the test programme.",
+            "src": "models/HPReservoir-v1.glb",
+            "NominalDiameter": "1200NB",
+            "MaterialGrade": "L450ME",
+            "DesignStandard": "T/SP/PIP/1",
+            "PressureClass": 600,
+            "ComissionDate": 2021,
+            "hotspots": []
         },
         {
-          "name": "Filter Meter Area",
-          "data-position": [-0.263, 0.035, 0.233],
-          "data-normal": [0.025, 1.0, -0.005]
+            "name": "Isolation Valves",
+            "description": "Isolation Valves of various sizes are installed throughout the test facility to enable effective isolation of sections of the facility, manage flow direction, facilitate maintenance, testing and commissioning, and to enable safe and effective start-up and shutdown of the facility.\nThere are two 450NB inlet isolation valves on the test facility and  are in a typical double block and bleed arrangement, consisting of two ball valves, with a vent valve installed between and a small-bore by-pass for allow gas pressure to be equalised across the mainline valve before operation.\nThe valves originated from the Billingham ICI offtake site and have seen a number of years natural gas service.",
+            "src": "models/ICIIsolation-v1.glb",
+            "NominalDiameter": "450NB",
+            "MaterialGrade": "L360NE",
+            "DesignStandard": "T/SP/V/6",
+            "PressureClass": 600,
+            "ComissionDate": 1993,
+            "hotspots": [
+                {
+                    "name": "Ball Valve 1",
+                    "description": "Isolation Valves of various sizes are installed throughout the test facility to enable effective isolation of sections of the facility, manage flow direction, facilitate maintenance, testing and commissioning, and to enable safe and effective start-up and shutdown of the facility.\nThere are two 450NB inlet isolation valves on the test facility and  are in a typical double block and bleed arrangement, consisting of two ball valves, with a vent valve installed between and a small-bore by-pass for allow gas pressure to be equalised across the mainline valve before operation.\nThe valves originated from the Billingham ICI offtake site and have seen a number of years natural gas service.",
+                    "data-position": [
+                        1661.756,
+                        7157.377,
+                        -1322.578
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "NominalDiameter": "450NB",
+                    "MaterialGrade": "L360NE",
+                    "DesignStandard": "T/SP/V/6",
+                    "PressureClass": 600,
+                    "ComissionDate": 1993
+                },
+                {
+                    "name": "Ball Valve 2",
+                    "description": "Isolation Valves of various sizes are installed throughout the test facility to enable effective isolation of sections of the facility, manage flow direction, facilitate maintenance, testing and commissioning, and to enable safe and effective start-up and shutdown of the facility.\nThere are two 450NB inlet isolation valves on the test facility and  are in a typical double block and bleed arrangement, consisting of two ball valves, with a vent valve installed between and a small-bore by-pass for allow gas pressure to be equalised across the mainline valve before operation.\nThe valves originated from the Billingham ICI offtake site and have seen a number of years natural gas service.",
+                    "data-position": [
+                        1578.518,
+                        7158.727,
+                        -1335.324
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "NominalDiameter": "450NB",
+                    "MaterialGrade": "L360NE",
+                    "DesignStandard": "T/SP/V/6",
+                    "PressureClass": 600,
+                    "ComissionDate": 1993
+                }
+            ]
         },
         {
-          "name": "Flow Control Valve",
-          "data-position": [-0.351, 0.064, 0.165],
-          "data-normal": [0.99, -0.01, -0.139]
+            "name": "Filter Meter Area",
+            "description": "The inlet filter area, consists of a 450NB filter and is used to capture any particulates which may be present in the gas.  Over time the filter element will collect dust and dirt, where fitted with a differential pressure gauge, it will provide an indication of when the filter element requires replacing.\nThe Filter / Meter area originated from the Enron Billingham offtake and Eakring Training Academy sites respectively.",
+            "src": "models/FilterMeterArea-v1.glb",
+            "NominalDiameter": "450NB",
+            "MaterialGrade": "L360NE",
+            "DesignStandard": "-",
+            "PressureClass": 600,
+            "ComissionDate": 1993,
+            "hotspots": [
+                {
+                    "name": "Meter Skid",
+                    "description": "Twin Stream Ultrasonic Meters are installed on the test facility and are used to calculate flow rates.  This is based on gas composition, density, pressure and temperature and is calculated by the velocity of sound between two probes. One of the meters are rated for 100% Natural gas and the other meter is rated to up to 30% Hydrogen blend.",
+                    "data-position": [
+                        1285.0832,
+                        7241.227,
+                        -1884.42
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "NominalDiameter": "80NB",
+                    "MaterialGrade": "L245NE",
+                    "DesignStandard": "T/PM/M/13",
+                    "PressureClass": 600,
+                    "ComissionDate": 2018
+                },
+                {
+                    "name": "Filter Skid",
+                    "description": "The inlet filter area, consists of a 450NB filter and is used to capture any particulates which may be present in the gas.  Over time the filter element will collect dust and dirt, where fitted with a differential pressure gauge, it will provide an indication of when the filter element requires replacing.",
+                    "data-position": [
+                        1503.199,
+                        7251.781,
+                        -1737.063
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "NominalDiameter": "450NB",
+                    "MaterialGrade": "L360NE",
+                    "DesignStandard": "T/SP/E/13",
+                    "PressureClass": 600,
+                    "ComissionDate": 1993
+                }
+            ]
         },
         {
-          "name": "Pressure Reduction",
-          "data-position": [-0.217, 0.063, -0.019],
-          "data-normal": [0.0, 1.0, 0.0]
+            "name": "Flow Control Valve",
+            "description": "The Flow Control valve (FCV) on the test facility is remotely controlled to allow the flow of gas and pressure between sections of pipe.\nThe FCV and NRV in this area both originated from the Enron Billingham offtake site.",
+            "src": "models/EnronFCV-v1.glb",
+            "NominalDiameter": "450NB",
+            "MaterialGrade": "L360NE",
+            "DesignStandard": "-",
+            "PressureClass": 600,
+            "ComissionDate": 1993,
+            "hotspots": [
+                {
+                    "name": "FCV",
+                    "description": "The 450NB FCV is used in the test facility to control the flow rate of the gas.  Where the desired flowrate can be set, and the valve will miantain the required flow by constantly adjusting itself, allowing more or less gas through.",
+                    "data-position": [
+                        1150.223,
+                        7273.181,
+                        -1973.167
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "NominalDiameter": "450NB",
+                    "MaterialGrade": "L360NE",
+                    "DesignStandard": "T/SP/VA/5",
+                    "PressureClass": 600,
+                    "ComissionDate": 1993
+                },
+                {
+                    "name": "NRV",
+                    "description": "The 450NB Non-Return Valve (NRV) ensures the flow of gas in one direction. This protects upstream parts of the network where pressure conditions may have otherwise caused reverse flow.",
+                    "data-position": [
+                        1162.361,
+                        7230.449,
+                        -2045.379
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "NominalDiameter": "450NB",
+                    "MaterialGrade": "L360NE",
+                    "DesignStandard": "T/SP/V/6",
+                    "PressureClass": 600,
+                    "ComissionDate": 1993
+                }
+            ]
         },
         {
-          "name": "Block Valve",
-          "data-position": [-0.215, 0.055, -0.269],
-          "data-normal": [-0.017, 0.995, 0.102]
+            "name": "Pressure Reduction",
+            "description": "The pressure reduction area is representative of a typical Pressure Regulating Installation. This includes filtration, metering, pre-heat (through modular boilers and heat exchangers), and finally pressure reduction. All the assets in this area originated from  the Hays Chemicals exit point site.",
+            "src": "models/Hays-v1.glb",
+            "NominalDiameter": "100NB",
+            "MaterialGrade": "L245NE",
+            "DesignStandard": "IGEM/TD/13",
+            "PressureClass": 600,
+            "ComissionDate": 1999,
+            "hotspots": [
+                {
+                    "name": "Filters",
+                    "description": "These smaller filters ensure no particulates enter the pressure reduction equipment, both to protect the sensitive equipment and to maintain gas quality standards.",
+                    "data-position": [
+                        1389.843,
+                        7231.642,
+                        -2648.716
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "NominalDiameter": "80NB",
+                    "MaterialGrade": "L245NE",
+                    "DesignStandard": "T/SP/E/13",
+                    "PressureClass": 600,
+                    "ComissionDate": 1999
+                },
+                {
+                    "name": "Meter Skid",
+                    "description": "When gas is flowing through the orifice plate meter, the differential pressure is determined to accurately calculate the flow rate of gas. This consists of two parallel streams, with a single Orifice Plate in each which, allows for one to be operational while the other provides redundancy.",
+                    "data-position": [
+                        1358.578,
+                        7230.379,
+                        -2492.314
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "NominalDiameter": "80NB",
+                    "MaterialGrade": "L245NE",
+                    "DesignStandard": "T/PM/M/13",
+                    "PressureClass": 600,
+                    "ComissionDate": 1999
+                },
+                {
+                    "name": "Heat Exchanger",
+                    "description": "When natural gas is expanded, it also reduces in temperature. To avoid pipes and valves becoming frozen, the gas in the system is pre-heated before its pressure is reduced. The boiler house contains three gas boilers that work in tandem to heat water. Where the water is passed through the heat exchanger and heats the gas flowing through the system prior to pressure reduction.",
+                    "data-position": [
+                        1418.924,
+                        7233.663,
+                        -2345.411
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "NominalDiameter": "100NB",
+                    "MaterialGrade": "L245NE",
+                    "DesignStandard": "T/SP/E/68",
+                    "PressureClass": 600,
+                    "ComissionDate": 1999
+                },
+                {
+                    "name": "Boiler LDU",
+                    "description": "When natural gas is expanded, it also reduces in temperature. To avoid pipes and valves becoming frozen, the gas in the system is pre-heated before its pressure is reduced. The boiler house contains three gas boilers that work in tandem to heat water. Where the water is passed through the heat exchanger and heats the gas flowing through the system prior to pressure reduction. ",
+                    "data-position": [
+                        1493.152,
+                        7224.481,
+                        -2426.382
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "NominalDiameter": "25NB",
+                    "MaterialGrade": "L245NE",
+                    "DesignStandard": "T/SP/TR/18",
+                    "PressureClass": 600,
+                    "ComissionDate": 1999
+                },
+                {
+                    "name": "Pressure Reduction",
+                    "description": "",
+                    "data-position": [
+                        1528.632,
+                        7230.343,
+                        -2409.275
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ]
+                }
+            ]
         },
         {
-          "name": "LP Reservoir",
-          "data-position": [-0.043, 0.049, -0.187],
-          "data-normal": [0.156, 0.987, 0.024]
+            "name": "Block Valve",
+            "description": "Block Valves are typically installed on cross country pipelines to limit inventory loss in an emergency, facilitate maintenance, flow direction, repair, modification, testing and commissioning on the Gas Transmission pipeline network.  This elemnt of the test facility will be used to demonstrate the capability of critical valves which are used to isolate pipelines in event of an emergency or for maintenance.",
+            "src": "models/Lanark-v3.glb",
+            "NominalDiameter": "900NB",
+            "MaterialGrade": "L450ME",
+            "DesignStandard": "-",
+            "PressureClass": 600,
+            "ComissionDate": 1976,
+            "hotspots": [
+                {
+                    "name": "Ball Valve",
+                    "description": "Block Valves are typically installed on cross country pipelines to limit inventory loss in an emergency, facilitate maintenance, flow direction, repair, modification, testing and commissioning on the Gas Transmission pipeline network.  This elemnt of the test facility will be used to demonstrate the capability of critical valves which are used to isolate pipelines in event of an emergency or for maintenance.",
+                    "data-position": [
+                        1509.989,
+                        7245.856,
+                        -3071.759
+                    ],
+                    "data-normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "NominalDiameter": "900NB",
+                    "MaterialGrade": "L450ME",
+                    "DesignStandard": "T/SP/V/6",
+                    "PressureClass": 600,
+                    "ComissionDate": 1976
+                }
+            ]
         },
         {
-          "name": "Compression",
-          "data-position": [-0.064, 0.064, 0.169],
-          "data-normal": [0.0, 1.0, 0.0]
+            "name": "LP Reservoir",
+            "description": "The low pressure natural gas / hydrogen reservoir is constructed from large diameter pipe and is located at the end of the flow facility test loop and will ensure there is a sufficient volume of gas for the re-compression unit to run efficiently.",
+            "src": "models/LPReservoir-v1.glb",
+            "NominalDiameter": "900NB",
+            "MaterialGrade": "L450ME",
+            "DesignStandard": "T/SP/PIP/1",
+            "PressureClass": 600,
+            "ComissionDate": 2022,
+            "hotspots": []
+        },
+        {
+            "name": "Compression",
+            "description": "The re-compression unit generates gas flows around the facility. This unit has been designed for the FutureGrid facility, to operate with natural gas and hydrogen at a wide range of flow rates and pressures to replicate the national transmission system. ",
+            "src": "models/Full Recompression Line-v1.glb",
+            "NominalDiameter": "150NB",
+            "MaterialGrade": "L290NE",
+            "DesignStandard": "T/PM/COMP/20",
+            "PressureClass": 600,
+            "ComissionDate": 2022,
+            "hotspots": []
         }
-      ]
-    },
-    {
-      "name": "HP Reservoir",
-      "description": "The HP reservoir is a large vessel used to store the natural gas / hydrogen for the system. It is constructed from 1200NB carbon steel pipe and includes a fill point for offloading from a tanker. Pressure and temperature indication is installed on the reservoir.",
-      "src": "models/HPReservoir-v1.glb",
-      "hotspots": []
-    },
-    {
-      "name": "Isolation Valves",
-      "description": "The isolation valves are two 450NB actuated ball valves with a vent point in between and a 50NB bridle around. The valves originated from the Billingham ICI offtake site and have seen a number of years natural gas service.",
-      "src": "models/ICIIsolation-v1.glb",
-      "hotspots": [
-        {
-          "name": "Ball Valve 1",
-          "data-position": [1661.756, 7157.377, -1322.578],
-          "data-normal": [0, 1, 0]
-        },
-        {
-          "name": "Ball Valve 2",
-          "data-position": [1578.518, 7158.727, -1335.324],
-          "data-normal": [0, 1, 0]
-        }
-      ]
-    },
-    {
-      "name": "Filter Meter Area",
-      "description": "The filter meter area consists of a 450NB filter and an 80NB meter skid. The filter is a t-type filter which orignated from the Enron Billingham offtake site. It has differential pressure indication across it. The filter can be isolated using the two 450NB isolation plug valves. The 80NB meter skid consists of twin stream ultrasonic flow meters with stream isolation. This skid originated from National Gas' Eakring Training Facility.",
-      "src": "models/FilterMeterArea-v1.glb",
-      "hotspots": [
-        {
-          "name": "Meter Skid",
-          "data-position": [1285.0832, 7241.227, -1884.42],
-          "data-normal": [0, 1, 0]
-        },
-        {
-          "name": "Filter Skid",
-          "data-position": [1503.199, 7251.781, -1737.063],
-          "data-normal": [0, 1, 0]
-        }
-      ]
-    },
-    {
-      "name": "Flow Control Valve",
-      "description": "This area includes a 450NB Flow Control followed by a 450NB Non-Return Valve, both of these valves originated from the Enron Billingham Offtake site. These allow for control of the flow around the site whilst preventing reverse flow.",
-      "src": "models/EnronFCV-v1.glb",
-      "hotspots": [
-        {
-          "name": "FCV",
-          "data-position": [1150.223, 7273.181, -1973.167],
-          "data-normal": [0, 1, 0]
-        },
-        {
-          "name": "NRV",
-          "data-position": [1162.361, 7230.449, -2045.379],
-          "data-normal": [0, 1, 0]
-        }
-      ]
-    },
-    {
-      "name": "Pressure Reduction",
-      "description": "The pressure reduction area is representative of a typical Pressure Regulating Installation. This includes filtration, metering, pre-heat (through modular boilers and heat exchangers), and finally pressure reduction. All the assets in this area originated from National Gas' Hays Chemicals site.",
-      "src": "models/Hays-v1.glb",
-      "hotspots": [
-        {
-          "name": "Filters",
-          "data-position": [1389.843, 7231.642, -2648.716],
-          "data-normal": [0, 1, 0]
-        },
-        {
-          "name": "Meter Skid",
-          "data-position": [1358.578, 7230.379, -2492.314],
-          "data-normal": [0, 1, 0]
-        },
-        {
-          "name": "Heat Exchanger",
-          "data-position": [1418.924, 7233.663, -2345.411],
-          "data-normal": [0, 1, 0]
-        },
-        {
-          "name": "Boiler LDU",
-          "data-position": [1493.152, 7224.481, -2426.382],
-          "data-normal": [0, 1, 0]
-        },
-        {
-          "name": "Pressure Reduction",
-          "data-position": [1528.632, 7230.343, -2409.275],
-          "data-normal": [0, 1, 0]
-        }
-      ]
-    },
-    {
-      "name": "Block Valve",
-      "description": "This section represents a typical above ground block valve installation. Block valves are used to isolate a section of a pipeline and typically comprise of a main line isolation valve, in this case 900NB ball valve, and a suitably sized bridle, in this case 450NB.",
-      "src": "models/Lanark-v3.glb",
-      "hotspots": [
-        {
-          "name": "Ball Valve",
-          "data-position": [1509.989, 7245.856, -3071.759],
-          "data-normal": [0, 1, 0]
-        }
-      ]
-    },
-    {
-      "name": "LP Reservoir",
-      "description": "The LP reservoir is a large vessel used to store the natural gas / hydrogen for the system. It is constructed from 900NB carbon steel pipe. Pressure and temperature indication is installed on the reservoir.",
-      "src": "models/LPReservoir-v1.glb",
-      "hotspots": []
-    },
-    {
-      "name": "Compression",
-      "description": "The re-compression unit generates gas flows around the facility. This unit has been designed for the FutureGrid facility, to operate with natural gas and hydrogen at a wide range of flow rates and pressures to replicate the national transmission system.",
-      "src": "models/Full Recompression Line-v1.glb",
-      "hotspots": []
-    }
-  ]
+    ]
 }

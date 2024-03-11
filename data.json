@@ -1,0 +1,704 @@
+{
+  "assets": [
+    {
+         "UID":1,
+         "Asset":"Phase 1",
+         "TCDescription":"The FutureGrid Phase 1 test facility is constructed largely from decommissioned assets and aims to demonstrate that the Gas National Transmission System (NTS) can be repurposed to transport hydrogen safely and reliably. This initial phase involves building an offline hydrogen test facility, to assess the impact that blends of hydrogen will have on NTS assets.",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"IGEM/TD/13",
+         "PressureClass":600,
+         "ComissionDate":2022
+      },
+      {
+         "UID":2,
+         "Asset":"HP Reservoir",
+         "TCDescription":"The high pressure storage reservoir is constructed from large diameter pipe that acts as a storage reservoir for the test facility. Gas in the form of natural gas or hydrogen, or a specific blend of both, is stored in the high pressure store at 70 bar. This then connects to the facility and provides the gas required to conduct the test programme.",
+         "NominalDiameter":"1200NB",
+         "MaterialGrade":"L450ME",
+         "DesignStandard":"T/SP/PIP/1",
+         "PressureClass":600,
+         "ComissionDate":2021
+      },
+      {
+         "UID":3,
+         "Asset":"Isolation Valves",
+         "TCDescription":"Isolation Valves of various sizes are installed throughout the test facility to enable effective isolation of sections of the facility, manage flow direction, facilitate maintenance, testing and commissioning, and to enable safe and effective start-up and shutdown of the facility.\nThere are two 450NB inlet isolation valves on the test facility and  are in a typical double block and bleed arrangement, consisting of two ball valves, with a vent valve installed between and a small-bore by-pass for allow gas pressure to be equalised across the mainline valve before operation.\nThe valves originated from the Billingham ICI offtake site and have seen a number of years natural gas service.",
+         "NominalDiameter":"450NB",
+         "MaterialGrade":"L360NE",
+         "DesignStandard":"T/SP/V/6",
+         "PressureClass":600,
+         "ComissionDate":1993
+      },
+      {
+         "UID":4,
+         "Asset":"Ball Valve 1",
+         "TCDescription":"Isolation Valves of various sizes are installed throughout the test facility to enable effective isolation of sections of the facility, manage flow direction, facilitate maintenance, testing and commissioning, and to enable safe and effective start-up and shutdown of the facility.\nThere are two 450NB inlet isolation valves on the test facility and  are in a typical double block and bleed arrangement, consisting of two ball valves, with a vent valve installed between and a small-bore by-pass for allow gas pressure to be equalised across the mainline valve before operation.\nThe valves originated from the Billingham ICI offtake site and have seen a number of years natural gas service.",
+         "NominalDiameter":"450NB",
+         "MaterialGrade":"L360NE",
+         "DesignStandard":"T/SP/V/6",
+         "PressureClass":600,
+         "ComissionDate":1993
+      },
+      {
+         "UID":5,
+         "Asset":"Ball Valve 2",
+         "TCDescription":"Isolation Valves of various sizes are installed throughout the test facility to enable effective isolation of sections of the facility, manage flow direction, facilitate maintenance, testing and commissioning, and to enable safe and effective start-up and shutdown of the facility.\nThere are two 450NB inlet isolation valves on the test facility and  are in a typical double block and bleed arrangement, consisting of two ball valves, with a vent valve installed between and a small-bore by-pass for allow gas pressure to be equalised across the mainline valve before operation.\nThe valves originated from the Billingham ICI offtake site and have seen a number of years natural gas service.",
+         "NominalDiameter":"450NB",
+         "MaterialGrade":"L360NE",
+         "DesignStandard":"T/SP/V/6",
+         "PressureClass":600,
+         "ComissionDate":1993
+      },
+      {
+         "UID":6,
+         "Asset":"Filter Meter Area",
+         "TCDescription":"The inlet filter area, consists of a 450NB filter and is used to capture any particulates which may be present in the gas.  Over time the filter element will collect dust and dirt, where fitted with a differential pressure gauge, it will provide an indication of when the filter element requires replacing.\nThe Filter / Meter area originated from the Enron Billingham offtake and Eakring Training Academy sites respectively.",
+         "NominalDiameter":"450NB",
+         "MaterialGrade":"L360NE",
+         "DesignStandard":"-",
+         "PressureClass":600,
+         "ComissionDate":1993
+      },
+      {
+         "UID":7,
+         "Asset":"Meter Skid",
+         "TCDescription":"Twin Stream Ultrasonic Meters are installed on the test facility and are used to calculate flow rates.  This is based on gas composition, density, pressure and temperature and is calculated by the velocity of sound between two probes. One of the meters are rated for 100% Natural gas and the other meter is rated to up to 30% Hydrogen blend.",
+         "NominalDiameter":"80NB",
+         "MaterialGrade":"L245NE",
+         "DesignStandard":"T/PM/M/13",
+         "PressureClass":600,
+         "ComissionDate":2018
+      },
+      {
+         "UID":8,
+         "Asset":"Filter Skid",
+         "TCDescription":"The inlet filter area, consists of a 450NB filter and is used to capture any particulates which may be present in the gas.  Over time the filter element will collect dust and dirt, where fitted with a differential pressure gauge, it will provide an indication of when the filter element requires replacing.",
+         "NominalDiameter":"450NB",
+         "MaterialGrade":"L360NE",
+         "DesignStandard":"T/SP/E/13",
+         "PressureClass":600,
+         "ComissionDate":1993
+      },
+      {
+         "UID":9,
+         "Asset":"Flow Control Valve",
+         "TCDescription":"The Flow Control valve (FCV) on the test facility is remotely controlled to allow the flow of gas and pressure between sections of pipe.\nThe FCV and NRV in this area both originated from the Enron Billingham offtake site.",
+         "NominalDiameter":"450NB",
+         "MaterialGrade":"L360NE",
+         "DesignStandard":"-",
+         "PressureClass":600,
+         "ComissionDate":1993
+      },
+      {
+         "UID":10,
+         "Asset":"FCV",
+         "TCDescription":"The 450NB FCV is used in the test facility to control the flow rate of the gas.  Where the desired flowrate can be set, and the valve will miantain the required flow by constantly adjusting itself, allowing more or less gas through.",
+         "NominalDiameter":"450NB",
+         "MaterialGrade":"L360NE",
+         "DesignStandard":"T/SP/VA/5",
+         "PressureClass":600,
+         "ComissionDate":1993
+      },
+      {
+         "UID":11,
+         "Asset":"NRV",
+         "TCDescription":"The 450NB Non-Return Valve (NRV) ensures the flow of gas in one direction. This protects upstream parts of the network where pressure conditions may have otherwise caused reverse flow.",
+         "NominalDiameter":"450NB",
+         "MaterialGrade":"L360NE",
+         "DesignStandard":"T/SP/V/6",
+         "PressureClass":600,
+         "ComissionDate":1993
+      },
+      {
+         "UID":12,
+         "Asset":"Pressure Reduction",
+         "TCDescription":"The pressure reduction area is representative of a typical Pressure Regulating Installation. This includes filtration, metering, pre-heat (through modular boilers and heat exchangers), and finally pressure reduction. All the assets in this area originated from  the Hays Chemicals exit point site.",
+         "NominalDiameter":"100NB",
+         "MaterialGrade":"L245NE",
+         "DesignStandard":"IGEM/TD/13",
+         "PressureClass":600,
+         "ComissionDate":1999
+      },
+      {
+         "UID":13,
+         "Asset":"Filters",
+         "TCDescription":"These smaller filters ensure no particulates enter the pressure reduction equipment, both to protect the sensitive equipment and to maintain gas quality standards. ",
+         "NominalDiameter":"80NB",
+         "MaterialGrade":"L245NE",
+         "DesignStandard":"T/SP/E/13",
+         "PressureClass":600,
+         "ComissionDate":1999
+      },
+      {
+         "UID":14,
+         "Asset":"Meter Skid",
+         "TCDescription":"When gas is flowing through the orifice plate meter, the differential pressure is determined to accurately calculate the flow rate of gas. This consists of two parallel streams, with a single Orifice Plate in each which, allows for one to be operational while the other provides redundancy. ",
+         "NominalDiameter":"80NB",
+         "MaterialGrade":"L245NE",
+         "DesignStandard":"T/PM/M/13",
+         "PressureClass":600,
+         "ComissionDate":1999
+      },
+      {
+         "UID":15,
+         "Asset":"Heat Exchanger",
+         "TCDescription":"When natural gas is expanded, it also reduces in temperature. To avoid pipes and valves becoming frozen, the gas in the system is pre-heated before its pressure is reduced. The boiler house contains three gas boilers that work in tandem to heat water. Where the water is passed through the heat exchanger and heats the gas flowing through the system prior to pressure reduction. ",
+         "NominalDiameter":"100NB",
+         "MaterialGrade":"L245NE",
+         "DesignStandard":"T/SP/E/68",
+         "PressureClass":600,
+         "ComissionDate":1999
+      },
+      {
+         "UID":16,
+         "Asset":"Boiler LDU",
+         "TCDescription":"When natural gas is expanded, it also reduces in temperature. To avoid pipes and valves becoming frozen, the gas in the system is pre-heated before its pressure is reduced. The boiler house contains three gas boilers that work in tandem to heat water. Where the water is passed through the heat exchanger and heats the gas flowing through the system prior to pressure reduction. ",
+         "NominalDiameter":"25NB",
+         "MaterialGrade":"L245NE",
+         "DesignStandard":"T/SP/TR/18",
+         "PressureClass":600,
+         "ComissionDate":1999
+      },
+      {
+         "UID":17,
+         "Asset":"Regulator Skid",
+         "TCDescription":"The pressure reduction area is representative of a typical Pressure Regulating Installation. This includes filtration, metering, pre-heat (through modular boilers and heat exchangers), and finally pressure reduction. All the assets in this area originated from National Gas' Hays Chemicals site.",
+         "NominalDiameter":"80NB",
+         "MaterialGrade":"L245NE",
+         "DesignStandard":"IGEM/TD/13",
+         "PressureClass":600,
+         "ComissionDate":1999
+      },
+      {
+         "UID":18,
+         "Asset":"Block Valve",
+         "TCDescription":"Block Valves are typically installed on cross country pipelines to limit inventory loss in an emergency, facilitate maintenance, flow direction, repair, modification, testing and commissioning on the Gas Transmission pipeline network.  This elemnt of the test facility will be used to demonstrate the capability of critical valves which are used to isolate pipelines in event of an emergency or for maintenance.",
+         "NominalDiameter":"900NB",
+         "MaterialGrade":"L450ME",
+         "DesignStandard":"-",
+         "PressureClass":600,
+         "ComissionDate":1976
+      },
+      {
+         "UID":19,
+         "Asset":"Ball Valve",
+         "TCDescription":"Block Valves are typically installed on cross country pipelines to limit inventory loss in an emergency, facilitate maintenance, flow direction, repair, modification, testing and commissioning on the Gas Transmission pipeline network.  This elemnt of the test facility will be used to demonstrate the capability of critical valves which are used to isolate pipelines in event of an emergency or for maintenance.",
+         "NominalDiameter":"900NB",
+         "MaterialGrade":"L450ME",
+         "DesignStandard":"T/SP/V/6",
+         "PressureClass":600,
+         "ComissionDate":1976
+      },
+      {
+         "UID":20,
+         "Asset":"LP Reservoir",
+         "TCDescription":"The low pressure natural gas / hydrogen reservoir is constructed from large diameter pipe and is located at the end of the flow facility test loop and will ensure there is a sufficient volume of gas for the re-compression unit to run efficiently.",
+         "NominalDiameter":"900NB",
+         "MaterialGrade":"L450ME",
+         "DesignStandard":"T/SP/PIP/1",
+         "PressureClass":600,
+         "ComissionDate":2022
+      },
+      {
+         "UID":21,
+         "Asset":"Compression",
+         "TCDescription":"The re-compression unit generates gas flows around the facility. This unit has been designed for the FutureGrid facility, to operate with natural gas and hydrogen at a wide range of flow rates and pressures to replicate the national transmission system. ",
+         "NominalDiameter":"150NB",
+         "MaterialGrade":"L290NE",
+         "DesignStandard":"T/PM/COMP/20",
+         "PressureClass":600,
+         "ComissionDate":2022
+      },
+      {
+         "UID":22,
+         "Asset":"Phase 2",
+         "TCDescription":"The Phase 2 FutureGrid test loop is a 1km pipeline constructed largely from decommissioned assets that will allow National Gas to assess the performance of an existing gas compressor and ancilliary equipment for use with blends of hydrogen in natural gas as well as 100% hydrogen.",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":23,
+         "Asset":"Compression Area",
+         "TCDescription":"The compression area consists of the compressor Cab, the aftercooler, the flow control valve, and the associated pipework facilitating connection to, and isolation from, the main pipeline loop. ",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":24,
+         "Asset":"Compressor",
+         "TCDescription":"The compressor is a repurposed unit taken from National Gas' Huntingdon Compressor Station. It consists of a 12MW Rolls-Royce Avon SGT-A20 gas turbine which indirectly drives a gas compressor unit. This equipment is housed in an enclosure which provides ventilation, sound dampening, and also contains the required ancilliary equipment. This arrangement is representative of a large portion of the National Gas compression fleet.  The FutureGrid test programme aims to assess the suitability and performance of the existing compressor and associated equipment for use with hydrogen as well as a new hydrogen compressor. ",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":25,
+         "Asset":"Suction & Discharge Lines",
+         "TCDescription":"The suction and discharge lines are 900NB pipe connections between the gas compressor unit and and the loop. These include actuated ball valves for isolation purposes, an NRV to prevent reverse flow, and recycle / anti surge loop to faciliate hot gas bypass to prevent surge conditions and maintain optimum flow through the compressor.",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":26,
+         "Asset":"Ball Valve A",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":27,
+         "Asset":"Ball Valve B",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":28,
+         "Asset":"Ball Valve C",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":29,
+         "Asset":"Ball Valve D",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":30,
+         "Asset":"Strainer",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":31,
+         "Asset":"NRV Discharge",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":32,
+         "Asset":"NRV Bypass",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":33,
+         "Asset":"Recycle Connection",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":34,
+         "Asset":"Recycle Valve",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":35,
+         "Asset":"Aftercooler",
+         "TCDescription":"The aftercooler is a Kraftband air-cooled heat exchanger which reduces the temperature of the hot gas from the compressor discharge. This is particularly important in the test facility due the relatively short length of the pipeline in the loop which reduces the oportunity for the gas temperature to decay to ground temperature. ",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":36,
+         "Asset":"Inlet Isolation Valve",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":37,
+         "Asset":"Outlet Isolation Valve",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":38,
+         "Asset":"Flow Control Valve",
+         "TCDescription":"The flow control valve is positioned downstream of the compressor and will be used to provide different loading conditions on the compressor and facilitate complete of the compressor performance testing programme. ",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":39,
+         "Asset":"Pig Trap Launch Arrgt",
+         "TCDescription":"The pig trap launch arrangement provides facility for connection of a pipeline inspection gauge launch vessel. These are typically found at either end of sections of pipeline and allow completion of 'pigging runs' which can be a key process for cleaning and integrity inspection of pipelines. ",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":40,
+         "Asset":"Compression Isolation Valve",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":41,
+         "Asset":"Pig Trap Isolation Valve",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":42,
+         "Asset":"Fill Points",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":43,
+         "Asset":"Pig Trap Receive Arrgt",
+         "TCDescription":"The pig trap receive arrangement includes a full scale pig trap receive vessel. These are typically found at either end of sections of pipeline and allow completion of 'pigging runs' which can be a key process for cleaning and integrity inspection of pipelines. ",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":44,
+         "Asset":"Compression Isolation Valve",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":45,
+         "Asset":"Pig Trap Isolation Valve",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":46,
+         "Asset":"Fill Points",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":47,
+         "Asset":"Defect Analysis Area",
+         "TCDescription":"The defect analysis area is a section of the pipeline loop between two block valve assemblies which can be used to isolation the section. This has been provided to replicate a pipeline section isolation and allow typical pipeline isolation operations to be performed and validated for a hydrogen environment. This section can also be utilised for addition of further equipment to the pipeline for testing if required in future. ",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":48,
+         "Asset":"Block Valve A",
+         "TCDescription":"Block Valve A is a 900NB double block valve assembly consisting of two 900NB ball valves and fixed 200NB bypass with vent points and 200NB connection offtake / recompression connection points. This provides high quality isolation between the upstream and downstream pipeline sections. ",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":49,
+         "Asset":"Ball Valve A1",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":50,
+         "Asset":"Ball Valve A2",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":51,
+         "Asset":"Ball Valve A3",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":52,
+         "Asset":"Ball Valve A4",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":53,
+         "Asset":"Plug Valve A1",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":54,
+         "Asset":"Plug Valve A2",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":55,
+         "Asset":"Plug Valve A3",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":56,
+         "Asset":"Plug Valve A4",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":57,
+         "Asset":"Block Valve B",
+         "TCDescription":"Block Valve B is a 900NB double block valve assembly consisting of two 900NB ball valves and fixed 200NB bypass with vent points and 200NB connection offtake / recompression connection points. This provides high quality isolation between the upstream and downstream pipeline sections. ",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":58,
+         "Asset":"Ball Valve B1",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":59,
+         "Asset":"Ball Valve B2",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":60,
+         "Asset":"Ball Valve B3",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":61,
+         "Asset":"Ball Valve B4",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":62,
+         "Asset":"Plug Valve B1",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":63,
+         "Asset":"Plug Valve B2",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":64,
+         "Asset":"Plug Valve B3",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":65,
+         "Asset":"Plug Valve B4",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":66,
+         "Asset":"Fuel Gas Reservoirs",
+         "TCDescription":"The fuel gas reservoirs are 1200NB pipe sections which will provide the storage for the fuel gas for the gas turbine. The reservoirs are sized to provide the appropriate amount of fuel, hydrogen and natural gas, to allow the turbine run for the required amount of time to complete the test programme.",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":67,
+         "Asset":"NG Reservoirs",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":68,
+         "Asset":"H2 Reservoirs",
+         "TCDescription":"",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":69,
+         "Asset":"Fuel Gas Skid",
+         "TCDescription":"The fuel gas skid provides pressure regulation of the fuel gas from the reservoirs to the turbine.",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      },
+      {
+         "UID":70,
+         "Asset":"Vent / Flare Stack",
+         "TCDescription":"The vent stack will allow venting of gas to reduce gas inventory as required by test plan or during operational, maintenance, or emergency shut down conditions. ",
+         "NominalDiameter":"",
+         "MaterialGrade":"",
+         "DesignStandard":"",
+         "PressureClass":null,
+         "ComissionDate":null
+      }
+  ]
+}
