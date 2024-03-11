@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         assetInfoContent += `<p>Material Grade: ${currentModel.MaterialGrade}</p>`;
         assetInfoContent += `<p>Design Standard: ${currentModel.DesignStandard}</p>`;
         assetInfoContent += `<p>Pressure Class: ${currentModel.PressureClass}</p>`;
-        assetInfoContent += `<p>Commission Date: ${currentModel.ComissionDate}</p>`;
+        assetInfoContent += `<p>Comission Date: ${currentModel.ComissionDate}</p>`;
 
         assetSection.innerHTML = assetInfoContent;
       };
@@ -225,19 +225,32 @@ fetch("assetdata.json")
 
 // Load a model by index and update hotspots
 const loadModel = (index) => {
-  modelViewer.setAttribute("src", assetData.models[index].src);
-  currentModel = index;
-  updateElementContentById("areaName", assetData.models[index].name);
-  updateElementContentById("infoTitle", assetData.models[index].name);
-  updateElementContentById("infoContent", assetData.models[index].description);
+  if (assetData && assetData.models && assetData.models[index]) {
+    const asset = assetData.models[index]; // First declaration
+    modelViewer.setAttribute("src", asset.src);
+    currentModel = index;
+
+    // Update common elements like areaName, infoTitle, and infoContent
+    updateElementContentById("areaName", asset.name);
+    updateElementContentById("infoTitle", asset.name);
+    updateElementContentById("infoContent", asset.description);
+
+  const updateIfExists = (id, data) => {
+    if (document.getElementById(id)) {
+      updateElementContentById(id, data);
+    } else {
+      console.warn(`Element with ID ${id} not found.`);
+      // Optionally, implement logic to handle the absence of expected elements
+    }
+  };
 
   // Update asset details in the "asset" tab
-  const asset = assetData.models[index];
-  updateElementContentById("nominal-diameter", asset.NominalDiameter);
-  updateElementContentById("material-grade", asset.MaterialGrade);
-  updateElementContentById("design-standard", asset.DesignStandard);
-  updateElementContentById("pressure-class", asset.PressureClass);
-  updateElementContentById("commission-date", asset.ComissionDate);
+  updateIfExists("nominal-diameter", asset.NominalDiameter);
+  updateIfExists("material-grade", asset.MaterialGrade);
+  updateIfExists("design-standard", asset.DesignStandard);
+  updateIfExists("pressure-class", asset.PressureClass);
+  updateIfExists("comission-date", asset.ComissionDate);
+}
 };
 
 // Load a model by name and update hotspots
