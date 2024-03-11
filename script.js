@@ -191,10 +191,12 @@ const loadModel = (index) => {
 
 // Load a model by name and update hotspots
 const loadModelByName = (modelName) => {
+  console.log("Attempting to load model:", modelName);
   const modelIndex = assetData.models.findIndex(
     (model) => model.name === modelName
   );
   if (modelIndex !== -1) {
+    console.log("Model found at index:", modelIndex);
     loadModel(modelIndex);
     updateHotspots();
     updateElementContentById("areaName", assetData.models[modelIndex].name);
@@ -203,10 +205,14 @@ const loadModelByName = (modelName) => {
       "infoContent",
       assetData.models[modelIndex].description
     );
+    console.log("Updated Info Section for model:", modelName);
     // Additionally, update the Asset tab content
     updateElementContentById("assetTitle", assetData.models[modelIndex].name); // Assumes you have an element with ID 'assetTitle'
-    updateElementContentById("nominalDiameter", assetData.models[modelIndex].NominalDiameter); 
-    updateElementContentById("materialGrade", assetData.models[modelIndex].MaterialGrade);
+    updateElementContentById("nominalDiameter", "Nominal Diameter: " + assetData.models[modelIndex].NominalDiameter); 
+    console.log("Nominal Diameter:", assetData.models[modelIndex].NominalDiameter);
+  }
+  else{
+    console.log("Model not found:", modelName);
   }
 };
 
