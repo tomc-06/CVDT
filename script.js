@@ -114,44 +114,18 @@ sensorLink.addEventListener("click", function () {
 showSection(infoSection, infoLink);
 
 
-//Live data button click
+//Sensor positions formerly Live data button click
 
 document.getElementById("livedatabutton").addEventListener("click", () => {
-  const x = document.getElementById("livedatastrings");
-  if (x.style.display === "none") {
-    fetch(
-      "http://cvdt-api.cfms.org.uk:8082/gateway/veracity/assets/1/dataChannels/1/latest?nLatest=1"
-    )
-      .then((response) => response.json())
-      .then((siteData) => {
-        updateElementContentById(
-          "flowString",
-          `Gas flow = ${siteData[0].flow_m3ph} m^3/h`
-        );
-        updateElementContentById(
-          "compString",
-          `Gas composition = ${siteData[0].h2_comp_pct} %`
-        );
-        updateElementContentById(
-          "pressString",
-          `Gas pressure = ${siteData[0].pressure_barg} barg`
-        );
-        updateElementContentById(
-          "tempString",
-          `Gas temperature = ${siteData[0].temperature_degC} °C`
-        );
-      });
-    modelViewer.querySelectorAll(".Hotspot").forEach((element) => {
-      element.remove();
-    });
-    x.style.display = "block";
-    updateElementContentById("icon2", "close");
-    updateElementContentById("livedatabuttonstring", "Hide Sensor Positions");
-  } else {
-    x.style.display = "none";
-    updateElementContentById("icon2", "query_stats");
+  const liveDataButton = document.getElementById("livedatabuttonstring");
+  const isShowingPositions = liveDataButton.textContent.includes("Hide");
+
+  if (isShowingPositions) {
     updateElementContentById("livedatabuttonstring", "Show Sensor Positions");
-    updateHotspots();
+    updateHotspots(false); // Update hotspots without positions
+  } else {
+    updateElementContentById("livedatabuttonstring", "Hide Sensor Positions");
+    updateHotspots(true); // Update hotspots with positions
   }
 });
 
@@ -217,7 +191,7 @@ const loadModelByName = (modelName) => {
 };
 
 //Updates hotspot annotations
-const updateHotspots = () => {
+const updateHotspots = (showPositions) => {
   const hotspots = assetData.models[currentModel].hotspots;
 
   //Clears any existing hotspots
@@ -235,8 +209,7 @@ const updateHotspots = () => {
 
     const annotation = document.createElement("div");
     annotation.className = "HotspotAnnotation";
-    annotation.textContent = hotspot.name;
-
+    annotation.textContent = showPositions ? hotspot["data-position"].join(", ") : hotspot.name;
     button.appendChild(annotation);
 
     //Switches model to match annotation clicked
