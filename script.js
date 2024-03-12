@@ -80,20 +80,20 @@ function showhideQR() {
 // Get references to the navigation links and sections
 const infoLink = document.getElementById("info-link");
 const assetLink = document.getElementById("asset-link");
-const dataLink = document.getElementById("data-link");
+const sensorLink = document.getElementById("sensor-link");
 const infoSection = document.getElementById("info-section");
 const assetSection = document.getElementById("asset-section");
-const dataSection = document.getElementById("data-section");
+const sensorSection = document.getElementById("sensor-section");
 
 // Function to hide all sections and update active link
 function showSection(sectionToShow, activeLink) {
   infoSection.style.display = "none";
   assetSection.style.display = "none";
-  dataSection.style.display = "none";
+  sensorSection.style.display = "none";
 
   infoLink.classList.remove("active");
   assetLink.classList.remove("active");
-  dataLink.classList.remove("active");
+  sensorLink.classList.remove("active");
 
   sectionToShow.style.display = "block";
   activeLink.classList.add("active");
@@ -107,11 +107,12 @@ assetLink.addEventListener("click", function () {
   showSection(assetSection, assetLink);
 });
 
-dataLink.addEventListener("click", function () {
-  showSection(dataSection, dataLink);
+sensorLink.addEventListener("click", function () {
+  showSection(sensorSection, sensorLink);
 });
 
 showSection(infoSection, infoLink);
+
 
 //Live data button click
 
@@ -145,11 +146,11 @@ document.getElementById("livedatabutton").addEventListener("click", () => {
     });
     x.style.display = "block";
     updateElementContentById("icon2", "close");
-    updateElementContentById("livedatabuttonstring", "Hide Live Data");
+    updateElementContentById("livedatabuttonstring", "Hide Sensor Positions");
   } else {
     x.style.display = "none";
     updateElementContentById("icon2", "query_stats");
-    updateElementContentById("livedatabuttonstring", "Get Live Data");
+    updateElementContentById("livedatabuttonstring", "Show Sensor Positions");
     updateHotspots();
   }
 });
