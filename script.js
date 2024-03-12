@@ -189,7 +189,11 @@ const loadModel = (index) => {
   updateElementContentById("infoTitle", assetData.models[index].name);
   updateElementContentById("infoContent", assetData.models[index].description);
   updateElementContentById("assetTitle", assetData.models[index].name); // Assumes you have an element with ID 'assetTitle'
-    updateElementContentById("nominalDiameter", "Nominal Diameter: " + assetData.models[index].NominalDiameter); 
+  updateElementContentById("nominalDiameter", "Nominal Diameter: " + assetData.models[index].NominalDiameter); 
+  updateElementContentById("materialGrade", "Material Grade: " + assetData.models[index].NominalDiameter); 
+  updateElementContentById("designStandard", "Design Standard: " + assetData.models[index].NominalDiameter); 
+  updateElementContentById("pressureClass", "Pressure Class: " + assetData.models[index].NominalDiameter); 
+  updateElementContentById("comissionDate", "Commission Date: " + assetData.models[index].NominalDiameter); 
 };
 
 // Load a model by name and update hotspots
@@ -208,14 +212,6 @@ const loadModelByName = (modelName) => {
       "infoContent",
       assetData.models[modelIndex].description
     );
-    console.log("Updated Info Section for model:", modelName);
-    // Additionally, update the Asset tab content
-    updateElementContentById("assetTitle", assetData.models[modelIndex].name); // Assumes you have an element with ID 'assetTitle'
-    updateElementContentById("nominalDiameter", "Nominal Diameter: " + assetData.models[modelIndex].NominalDiameter); 
-    console.log("Nominal Diameter:", assetData.models[modelIndex].NominalDiameter);
-  }
-  else{
-    console.log("Model not found:", modelName);
   }
 };
 
