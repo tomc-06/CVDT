@@ -190,10 +190,10 @@ const loadModel = (index) => {
   updateElementContentById("infoContent", assetData.models[index].description);
   updateElementContentById("assetTitle", assetData.models[index].name); // Assumes you have an element with ID 'assetTitle'
   updateElementContentById("nominalDiameter", "Nominal Diameter: " + assetData.models[index].NominalDiameter); 
-  updateElementContentById("materialGrade", "Material Grade: " + assetData.models[index].NominalDiameter); 
-  updateElementContentById("designStandard", "Design Standard: " + assetData.models[index].NominalDiameter); 
-  updateElementContentById("pressureClass", "Pressure Class: " + assetData.models[index].NominalDiameter); 
-  updateElementContentById("comissionDate", "Commission Date: " + assetData.models[index].NominalDiameter); 
+  updateElementContentById("materialGrade", "Material Grade: " + assetData.models[index].MaterialGrade); 
+  updateElementContentById("designStandard", "Design Standard: " + assetData.models[index].DesignStandard); 
+  updateElementContentById("pressureClass", "Pressure Class: " + assetData.models[index].PressureClass); 
+  updateElementContentById("comissionDate", "Commission Date: " + assetData.models[index].ComissionDate); 
 };
 
 // Load a model by name and update hotspots
