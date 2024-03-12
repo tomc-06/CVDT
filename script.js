@@ -188,6 +188,8 @@ const loadModel = (index) => {
   updateElementContentById("areaName", assetData.models[index].name);
   updateElementContentById("infoTitle", assetData.models[index].name);
   updateElementContentById("infoContent", assetData.models[index].description);
+  updateElementContentById("assetTitle", assetData.models[index].name); // Assumes you have an element with ID 'assetTitle'
+    updateElementContentById("nominalDiameter", "Nominal Diameter: " + assetData.models[index].NominalDiameter); 
 };
 
 // Load a model by name and update hotspots
