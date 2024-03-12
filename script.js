@@ -184,6 +184,7 @@ fetch("assetdata.json")
 const loadModel = (index) => {
   modelViewer.setAttribute("src", assetData.models[index].src);
   currentModel = index;
+  console.log("Attempting to load index:", index);
   updateElementContentById("areaName", assetData.models[index].name);
   updateElementContentById("infoTitle", assetData.models[index].name);
   updateElementContentById("infoContent", assetData.models[index].description);
