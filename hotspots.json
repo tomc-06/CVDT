@@ -7,42 +7,42 @@
       "hotspots": [
         {
           "name": "HP Reservoir",
-          "data-position": [0.489, 0.018, 0.535],
+          "data-position": [63, -0.5, 72.9],
           "data-normal": [0.069, 0.917, -0.394]
         },
         {
           "name": "Isolation Valves",
-          "data-position": [-0.168, 0.016, 0.416],
+          "data-position": [-1.01, 0.614, 60.787],
           "data-normal": [0.000, 0.995, 0.100]
         },
         {
           "name": "Filter Meter Area",
-          "data-position": [-0.263, 0.035, 0.233],
+          "data-position": [-11.59, 2.99, 39.9],
           "data-normal": [0.025, 1.000, -0.005]
         },
         {
           "name": "Flow Control Valve",
-          "data-position": [-0.351, 0.064, 0.165],
+          "data-position": [-19, 3.94, 33.914],
           "data-normal": [0.990, -0.010, -0.139]
         },
         {
           "name": "Pressure Reduction",
-          "data-position": [-0.217, 0.063, -0.019],
+          "data-position": [-13.483, 3.147, 7.773],
           "data-normal": [0.00, 1.00, 0.00]
         },
         {
           "name": "Block Valve",
-          "data-position": [-0.215, 0.055, -0.269],
+          "data-position": [-5.59, 4.878, -8.043],
           "data-normal": [-0.017, 0.995, 0.102]
         },
         {
           "name": "LP Reservoir",
-          "data-position": [-0.043, 0.049, -0.187],
+          "data-position": [11.37, 3.84, 4.31],
           "data-normal": [0.156, 0.987, 0.024]
         },
         {
           "name": "Compression",
-          "data-position": [-0.064, 0.064, 0.169],
+          "data-position": [9.26, 5.739, 35.27],
           "data-normal": [0.000, 1.000, 0.000]
         }
       ]
