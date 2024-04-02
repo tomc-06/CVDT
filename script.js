@@ -213,16 +213,16 @@ const updateHotspots = (showPositions) => {
     button.setAttribute("slot", `hotspot-${index + 1}`);
 
    // Set position based on hotspot data
-   const [x, y, z] = hotspot["data-position"];
-   button.style.position = "absolute";
-   button.style.left = `${x}px`;
-   button.style.top = `${y}px`;
-   button.style.transform = `translate(-50%, -50%)`; // Center the button at the position
-   button.style.zIndex = `${z}`; // Set z-index to handle overlapping
+ //  const [x, y, z] = hotspot["data-position"];
+ //  button.style.position = "absolute";
+ //  button.style.left = `${x}px`;
+ //  button.style.top = `${y}px`;
+  // button.style.transform = `translate(-50%, -50%)`; // Center the button at the position
+ //  button.style.zIndex = `${z}`; // Set z-index to handle overlapping
 
-    //button.setAttribute("data-position", hotspot["data-position"].join(" "));
-   // button.setAttribute("data-normal", hotspot["data-normal"].join(" "));
-   // button.setAttribute("data-visibility-attribute", "visible");
+    button.setAttribute("data-position", hotspot["data-position"].join(" "));
+    button.setAttribute("data-normal", hotspot["data-normal"].join(" "));
+    button.setAttribute("data-visibility-attribute", "visible");
 
     const annotation = document.createElement("div");
     annotation.className = "HotspotAnnotation";
