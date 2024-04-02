@@ -192,7 +192,15 @@ const loadModelByName = (modelName) => {
 
 //Updates hotspot annotations
 const updateHotspots = (showPositions) => {
-  const hotspots = assetData.models[currentModel].hotspots;
+  fetch("hotspots.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Unable to retrieve hotspots.json");
+      }
+      return response.json();
+    })
+    .then((hotspotsData) => {
+      const hotspots = hotspotsData.models[currentModel].hotspots;
 
   //Clears any existing hotspots
   modelViewer.querySelectorAll(".Hotspot").forEach((element) => {
@@ -203,9 +211,18 @@ const updateHotspots = (showPositions) => {
     const button = document.createElement("button");
     button.className = "Hotspot";
     button.setAttribute("slot", `hotspot-${index + 1}`);
-    button.setAttribute("data-position", hotspot["data-position"].join(" "));
-    button.setAttribute("data-normal", hotspot["data-normal"].join(" "));
-    button.setAttribute("data-visibility-attribute", "visible");
+
+   // Set position based on hotspot data
+   const [x, y, z] = hotspot["data-position"];
+   button.style.position = "absolute";
+   button.style.left = `${x}px`;
+   button.style.top = `${y}px`;
+   button.style.transform = `translate(-50%, -50%)`; // Center the button at the position
+   button.style.zIndex = `${z}`; // Set z-index to handle overlapping
+
+    //button.setAttribute("data-position", hotspot["data-position"].join(" "));
+   // button.setAttribute("data-normal", hotspot["data-normal"].join(" "));
+   // button.setAttribute("data-visibility-attribute", "visible");
 
     const annotation = document.createElement("div");
     annotation.className = "HotspotAnnotation";
@@ -224,9 +241,12 @@ const updateHotspots = (showPositions) => {
         updateHotspots();
       }
     });
-
-    modelViewer.appendChild(button);
-  });
+modelViewer.appendChild(button);
+      });
+    })
+    .catch((error) => {
+      console.error("Fetch error: ", error.message);
+    });
 };
 
 //Site Overview button click
