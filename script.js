@@ -190,58 +190,51 @@ const loadModelByName = (modelName) => {
   }
 };
 
+let isSubModelActive = false; // False indicates the main model is displayed
+
 //Updates hotspot annotations
 const updateHotspots = (showPositions) => {
-  fetch("hotspots.json")
+  const jsonFile = showPositions ? "sensorposition_new.json" : "hotspots.json"; // Choose the JSON file based on showPositions
+  fetch(jsonFile)
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Unable to retrieve hotspots.json");
+        throw new Error(`Unable to retrieve ${jsonFile}`);
       }
       return response.json();
     })
-    .then((hotspotsData) => {
-      const hotspots = hotspotsData.models[currentModel].hotspots;
+    .then((data) => {
+      const hotspots = data.models[currentModel].hotspots;
+      // Clears any existing hotspots
+      modelViewer.querySelectorAll(".Hotspot").forEach(element => element.remove());
 
-  //Clears any existing hotspots
-  modelViewer.querySelectorAll(".Hotspot").forEach((element) => {
-    element.remove();
-  });
-  //Creates new hotspots
-  hotspots.forEach((hotspot, index) => {
-    const button = document.createElement("button");
-    button.className = "Hotspot";
-    button.setAttribute("slot", `hotspot-${index + 1}`);
+      // Creates new hotspots based on the fetched data
+      hotspots.forEach((hotspot, index) => {
+        const button = document.createElement("button");
+        button.className = "Hotspot";
+        button.setAttribute("slot", `hotspot-${index + 1}`);
+        button.setAttribute("data-position", hotspot["data-position"].join(" "));
+        button.setAttribute("data-normal", hotspot["data-normal"].join(" "));
+        button.setAttribute("data-visibility-attribute", "visible");
 
-   // Set position based on hotspot data
- //  const [x, y, z] = hotspot["data-position"];
- //  button.style.position = "absolute";
- //  button.style.left = `${x}px`;
- //  button.style.top = `${y}px`;
-  // button.style.transform = `translate(-50%, -50%)`; // Center the button at the position
- //  button.style.zIndex = `${z}`; // Set z-index to handle overlapping
+        const annotation = document.createElement("div");
+        annotation.className = "HotspotAnnotation";
+        // Use sensor-name for the annotation text if showPositions is true
+        annotation.textContent = showPositions ? hotspot["sensor-name"] : hotspot.name;
+        button.appendChild(annotation);
 
-    button.setAttribute("data-position", hotspot["data-position"].join(" "));
-    button.setAttribute("data-normal", hotspot["data-normal"].join(" "));
-    button.setAttribute("data-visibility-attribute", "visible");
+        button.addEventListener("click", () => {
+          const hotspotModelName = hotspot.name;
+          const modelIndex = assetData.models.findIndex(
+            (model) => model.name === hotspotModelName
+          );
+    
+          if (modelIndex !== -1) {
+            loadModel(modelIndex);
+            updateHotspots();
+          }
+        });
 
-    const annotation = document.createElement("div");
-    annotation.className = "HotspotAnnotation";
-    annotation.textContent = showPositions ? hotspot["data-position"].join(", ") : hotspot.name;
-    button.appendChild(annotation);
-
-    //Switches model to match annotation clicked
-    button.addEventListener("click", () => {
-      const hotspotModelName = hotspot.name;
-      const modelIndex = assetData.models.findIndex(
-        (model) => model.name === hotspotModelName
-      );
-
-      if (modelIndex !== -1) {
-        loadModel(modelIndex);
-        updateHotspots();
-      }
-    });
-modelViewer.appendChild(button);
+        modelViewer.appendChild(button);
       });
     })
     .catch((error) => {

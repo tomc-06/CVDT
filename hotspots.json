@@ -7,41 +7,49 @@
       "hotspots": [
         {
           "name": "HP Reservoir",
+          "sensor-name": "P, T, WT",
           "data-position": [63, -0.5, 72.9],
           "data-normal": [0.069, 0.917, -0.394]
         },
         {
           "name": "Isolation Valves",
+          "sensor-name": "P, T, WT",
           "data-position": [-1.01, 0.614, 60.787],
           "data-normal": [0.000, 0.995, 0.100]
         },
         {
           "name": "Filter Meter Area",
+          "sensor-name": "DP",
           "data-position": [-11.59, 2.99, 39.9],
           "data-normal": [0.025, 1.000, -0.005]
         },
         {
           "name": "Flow Control Valve",
+          "sensor-name": "P, T, WT",
           "data-position": [-19, 3.94, 33.914],
           "data-normal": [0.990, -0.010, -0.139]
         },
         {
           "name": "Pressure Reduction",
+          "sensor-name": "P, T, WT, P, T, WT",
           "data-position": [-13.483, 3.147, 7.773],
           "data-normal": [0.00, 1.00, 0.00]
         },
         {
           "name": "Block Valve",
+          "sensor-name": "P, T, WT, P, T, WT",
           "data-position": [-5.59, 4.878, -8.043],
           "data-normal": [-0.017, 0.995, 0.102]
         },
         {
           "name": "LP Reservoir",
+          "sensor-name": "P, T, WT",
           "data-position": [11.37, 3.84, 4.31],
           "data-normal": [0.156, 0.987, 0.024]
         },
         {
           "name": "Compression",
+          "sensor-name": "P, T, WT, P, T, WT",
           "data-position": [9.26, 5.739, 35.27],
           "data-normal": [0.000, 1.000, 0.000]
         }
@@ -58,11 +66,13 @@
       "hotspots": [
         {
           "name": "Ball Valve 1",
+          "sensor-name": "P, T, WT",
           "data-position": [1.659, 7.144, -1.318],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "Ball Valve 2",
+          "sensor-name": "P, T, WT",
           "data-position": [1.5721, 7.144, -1.332],
           "data-normal": [0, 1, 0]
         }
@@ -74,11 +84,13 @@
       "hotspots": [
         {
           "name": "Meter Skid",
+          "sensor-name": "P, T, WT",
           "data-position": [1.286, 7.195, -1.862],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "Filter Skid",
+          "sensor-name": "P, T, WT",
           "data-position": [1.498, 7.232, -1.712],
           "data-normal": [0, 1, 0]
         }
@@ -90,11 +102,13 @@
       "hotspots": [
         {
           "name": "FCV",
+          "sensor-name": "P, T, WT",
           "data-position": [-0.120, -0.0175, 0.332],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "NRV",
+          "sensor-name": "P, T, WT",
           "data-position": [0.0296, -0.0265, -0.399],
           "data-normal": [0, 1, 0]
         }
@@ -106,26 +120,31 @@
       "hotspots": [
         {
           "name": "Filters",
+          "sensor-name": "P, T, WT",
           "data-position": [1.408, 7.224, -2.638],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "Meter Skid",
+          "sensor-name": "P, T, WT",
           "data-position": [1.378, 7.198, -2.555],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "Heat Exchanger",
+          "sensor-name": "P, T, WT",
           "data-position": [1.416, 7.230, -2.342],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "Boiler LDU",
+          "sensor-name": "P, T, WT",
           "data-position": [1.517, 7.284, -2.427],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "Pressure Reduction",
+          "sensor-name": "P, T, WT",
           "data-position": [1.477, 7.281, -2.416],
           "data-normal": [0, 1, 0]
         }
@@ -137,6 +156,7 @@
       "hotspots": [
         {
           "name": "Ball Valve",
+          "sensor-name": "P, T, WT",
           "data-position": [1509.989, 7245.856, -3071.759],
           "data-normal": [0, 1, 0]
         }
@@ -144,11 +164,13 @@
     },
     {
       "name":"LP Reservoir",
+      "sensor-name": "P, T, WT",
       "src": "models/LPReservoir-v1.glb",
       "hotspots": []
     },
     {
       "name":"Compression",
+      "sensor-name": "P, T, WT",
       "src": "models/Full Recompression Line-v1.glb",
       "hotspots": []
     }
