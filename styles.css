@@ -292,3 +292,22 @@ model-viewer > #ar-prompt > img {
 .qr-code-button:hover {
   background-color: #111;
 }
+
+#sensor-section table {
+  width: 60%; 
+  margin: 0 auto; 
+  border-collapse: collapse; 
+  color: white; 
+}
+
+#sensor-section th, #sensor-section td {
+  border: 1px solid #ddd; 
+  text-align: left; 
+  padding: 8px; 
+}
+
+#sensor-section th {
+  background-color: #f2f2f2;
+  color: black; 
+}
+
