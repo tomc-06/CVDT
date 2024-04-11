@@ -163,9 +163,9 @@ fetch("assetdata.json")
 //Load a model by index and update hotspots
 const loadModel = (index) => {
   const modelData = assetData.models[index];
-
   modelViewer.setAttribute("src", modelData.src);
   currentModel = index;
+  updateAttributesFromModel(modelData);
   console.log("Current model", index);
    // Ensure the button state is correct for the loaded model
    const showSensorButtonState = (currentModel === 0) ? "Show Sensor Positions" : "Hide Sensor Positions";
@@ -228,16 +228,23 @@ const updateHotspots = (showPositions) => {
         button.appendChild(annotation);
 
         button.addEventListener("click", () => {
-          //const hotspotModelName = hotspot.name;
-          const modelIndex = assetData.models.findIndex(
-            (model) => model.name === hotspot.name
-          );
-    
+          const modelIndex = assetData.models.findIndex(model => model.name === hotspot.name);
+      
           if (modelIndex !== -1) {
-            loadModel(modelIndex);
-          //  updateHotspots();
+              // It's a main model
+              loadModel(modelIndex);
+          } else {
+              // It's a sub-model; find its parent model and then update attributes from the hotspot details
+              const parentModel = assetData.models.find(model => model.hotspots.some(h => h.name === hotspot.name));
+              if (parentModel) {
+                  const hotspotDetails = parentModel.hotspots.find(h => h.name === hotspot.name);
+                  if (hotspotDetails) {
+                      // Use hotspotDetails to update attributes for a sub-model
+                      updateAttributesFromModel(hotspotDetails); // This function is now universally used for updating UI
+                  }
+              }
           }
-        });
+      });
 
         modelViewer.appendChild(button);
       });
@@ -246,6 +253,20 @@ const updateHotspots = (showPositions) => {
       console.error("Fetch error: ", error.message);
     });
 };
+
+
+// This function updates the UI elements with the model's attributes
+function updateAttributesFromModel(modelDetails) {
+  updateElementContentById("areaName", modelDetails.name);
+  updateElementContentById("infoTitle", modelDetails.name);
+  updateElementContentById("infoContent", modelDetails.description);
+  updateElementContentById("assetTitle", modelDetails.name);
+  updateElementContentById("nominalDiameter", "Nominal Diameter: " + (modelDetails.NominalDiameter || '-')); 
+  updateElementContentById("materialGrade", "Material Grade: " + (modelDetails.MaterialGrade || '-')); 
+  updateElementContentById("designStandard", "Design Standard: " + (modelDetails.DesignStandard || '-')); 
+  updateElementContentById("pressureClass", "Pressure Class: " + (modelDetails.PressureClass || '-')); 
+  updateElementContentById("comissionDate", "Commission Date: " + (modelDetails.ComissionDate || '-'));
+}
 
 //Site Overview button click
 document.getElementById("siteoverviewbutton").addEventListener("click", () => {
