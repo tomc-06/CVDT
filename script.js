@@ -162,8 +162,11 @@ fetch("assetdata.json")
 
 //Load a model by index and update hotspots
 const loadModel = (index) => {
-  modelViewer.setAttribute("src", assetData.models[index].src);
+  const modelData = assetData.models[index];
+
+  modelViewer.setAttribute("src", modelData.src);
   currentModel = index;
+  console.log("Current model", index);
    // Ensure the button state is correct for the loaded model
    const showSensorButtonState = (currentModel === 0) ? "Show Sensor Positions" : "Hide Sensor Positions";
    updateElementContentById("livedatabuttonstring", showSensorButtonState);
@@ -206,8 +209,8 @@ const updateHotspots = (showPositions) => {
   fetch(jsonFile)
     .then(response => response.json())
     .then(data => {
-      const hotspots = data.models[currentModel].hotspots;
       modelViewer.querySelectorAll(".Hotspot").forEach(el => el.remove());
+      const hotspots = data.models[currentModel].hotspots;
 
       // Creates new hotspots based on the fetched data
       hotspots.forEach((hotspot, index) => {
