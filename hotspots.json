@@ -67,13 +67,13 @@
         {
           "name": "Ball Valve 1",
           "sensor-name": "P, T, WT",
-          "data-position": [1.659, 7.144, -1.318],
+          "data-position": [0.362075,-0.38978, 1.49742],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "Ball Valve 2",
           "sensor-name": "P, T, WT",
-          "data-position": [1.5721, 7.144, -1.332],
+          "data-position": [-0.44034, -0.377604, 1.3536843],
           "data-normal": [0, 1, 0]
         }
       ]
@@ -85,13 +85,13 @@
         {
           "name": "Meter Skid",
           "sensor-name": "P, T, WT",
-          "data-position": [1.286, 7.195, -1.862],
+          "data-position": [-0.4795395, -0.120175, -1.03172],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "Filter Skid",
           "sensor-name": "P, T, WT",
-          "data-position": [1.498, 7.232, -1.712],
+          "data-position": [1.71167, 0.031617, 0.296559],
           "data-normal": [0, 1, 0]
         }
       ]
@@ -121,31 +121,31 @@
         {
           "name": "Filters",
           "sensor-name": "P, T, WT",
-          "data-position": [1.408, 7.224, -2.638],
+          "data-position": [-0.366694, -0.267818, -1.98174],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "Meter Skid",
           "sensor-name": "P, T, WT",
-          "data-position": [1.378, 7.198, -2.555],
+          "data-position": [-0.482562, -0.30699, -0.501345],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "Heat Exchanger",
           "sensor-name": "P, T, WT",
-          "data-position": [1.416, 7.230, -2.342],
+          "data-position": [-0.026464, 0.01110606, 1.048137],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "Boiler LDU",
           "sensor-name": "P, T, WT",
-          "data-position": [1.517, 7.284, -2.427],
+          "data-position": [0.939171, 0.0153519, 0.011131],
           "data-normal": [0, 1, 0]
         },
         {
           "name": "Pressure Reduction",
           "sensor-name": "P, T, WT",
-          "data-position": [1.477, 7.281, -2.416],
+          "data-position": [0.62035, -0.04186, 0.412354],
           "data-normal": [0, 1, 0]
         }
       ]
@@ -157,7 +157,7 @@
         {
           "name": "Ball Valve",
           "sensor-name": "P, T, WT",
-          "data-position": [1509.989, 7245.856, -3071.759],
+          "data-position": [0.196844, 0.304284, -1.28611],
           "data-normal": [0, 1, 0]
         }
       ]
