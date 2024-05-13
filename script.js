@@ -76,6 +76,25 @@ function showhideQR() {
   }
 }
 
+document.getElementById("ar-button").addEventListener("click", function() {
+  scaleForWebXR();
+});
+
+function scaleForWebXR() {
+  const modelViewer = document.querySelector('model-viewer');
+  // Only apply scaling in WebXR mode
+  if (navigator.xr) {
+      modelViewer.setAttribute('ar-scale', '0.01');
+      console.log('Scaling applied for WebXR');
+  } else {
+      modelViewer.removeAttribute('ar-scale');
+      console.log('WebXR not supported, default scaling');
+  }
+  modelViewer.activateAR();
+}
+
+
+
 //DATA TABS
 // Get references to the navigation links and sections
 const infoLink = document.getElementById("info-link");
