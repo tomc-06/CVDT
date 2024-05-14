@@ -76,24 +76,6 @@ function showhideQR() {
   }
 }
 
-document.getElementById("ar-button").addEventListener("click", function() {
-  scaleForWebXR();
-});
-
-function scaleForWebXR() {
-  const modelViewer = document.querySelector('model-viewer');
-  // Only apply scaling in WebXR mode
-  if (navigator.xr) {
-      modelViewer.setAttribute('ar-scale', '0.01');
-      console.log('Scaling applied for WebXR');
-  } else {
-      modelViewer.removeAttribute('ar-scale');
-      console.log('WebXR not supported, default scaling');
-  }
-  modelViewer.activateAR();
-}
-
-
 
 //DATA TABS
 // Get references to the navigation links and sections
@@ -182,12 +164,17 @@ fetch("assetdata.json")
 //Load a model by index and update hotspots
 const loadModel = (index) => {
   const modelData = assetData.models[index];
+  const modelViewer = document.getElementById("model-viewer");
   modelViewer.setAttribute("src", modelData.src);
+  modelViewer.setAttribute("ios-src", modelData.iosSrc || modelData.src.replace('.glb', '.usdz'));
   currentModel = index;
+ // const modelData = assetData.models[index];
+ // modelViewer.setAttribute("src", modelData.src);
+  //currentModel = index;
   updateAttributesFromModel(modelData);
   console.log("Current model", index);
    // Ensure the button state is correct for the loaded model
-   const showSensorButtonState = (currentModel === 0) ? "Show Sensor Positions" : "Hide Sensor Positions";
+   const showSensorButtonState = (currentModel === 0) ? "Show Sensor Positions" : "Show Sensor Positions";
    updateElementContentById("livedatabuttonstring", showSensorButtonState);
   console.log("Attempting to load index:", index);
   updateElementContentById("areaName", assetData.models[index].name);

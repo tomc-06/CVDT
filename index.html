@@ -38,11 +38,13 @@
             </button>
           </div>
         </div>
-        <div id="qrscanner" class="qrscanner">
+        <div id="qrscanner" class="qrscanner" style="display:none;">
           <div id="reader" width="600px"></div>
         </div>
         <model-viewer
+          id="model-viewer"
           src="models\Spadeadam-1-Pivot.glb"
+          ios-src="models\Spadeadam-1-Pivot.usdz"
           model-name="Full Site Model"
           ar
           ar-modes="webxr scene-viewer quick-look"
