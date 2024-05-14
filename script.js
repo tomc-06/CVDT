@@ -167,9 +167,14 @@ const loadModel = (index) => {
   const modelViewer = document.getElementById("model-viewer");
   modelViewer.setAttribute("src", modelData.src);
 
-  const iosSrc = modelData.iosSrc || modelData.src.replace('.glb', '.usdz');
-  modelViewer.setAttribute("ios-src", iosSrc);
-  console.log(`Switching to USDZ: ${iosSrc}`);
+  if (index === 0) {
+    const iosSrc = modelData.iosSrc || modelData.src.replace('.glb', '.usdz');
+    modelViewer.setAttribute("ios-src", iosSrc);
+    console.log(`Switching to USDZ: ${iosSrc}`);
+  } else {
+    modelViewer.removeAttribute("ios-src");
+    console.log("Removed ios-src attribute");
+  }
   currentModel = index;
  // const modelData = assetData.models[index];
  // modelViewer.setAttribute("src", modelData.src);
