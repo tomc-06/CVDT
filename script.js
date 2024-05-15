@@ -117,14 +117,15 @@ showSection(infoSection, infoLink);
 
 //Sensor positions formerly Live data button click
 
+// Sensor positions button click
 document.getElementById("livedatabutton").addEventListener("click", () => {
   const liveDataButton = document.getElementById("livedatabuttonstring");
   const isShowingPositions = liveDataButton.textContent.includes("Hide");
 
- 
   if (currentModel !== 0) { // If not on the main model, reset to main model
     document.getElementById("siteoverviewbutton").click();
   } else { // Toggle sensor positions for the main model
+    showPositions = !isShowingPositions;
     if (isShowingPositions) {
       updateElementContentById("livedatabuttonstring", "Show Sensor Positions");
       updateHotspots(false);
@@ -134,6 +135,7 @@ document.getElementById("livedatabutton").addEventListener("click", () => {
     }
   }
 });
+
 
 //MODEL DATA
 const modelViewer = document.querySelector("model-viewer");
@@ -176,6 +178,7 @@ const loadModel = (index) => {
     console.log("Removed ios-src attribute");
   }
   currentModel = index;
+  showPositions = false; // Reset showPositions whenever a model is loaded
  // const modelData = assetData.models[index];
  // modelViewer.setAttribute("src", modelData.src);
   //currentModel = index;
@@ -194,7 +197,7 @@ const loadModel = (index) => {
   updateElementContentById("designStandard", "Design Standard: " + assetData.models[index].DesignStandard); 
   updateElementContentById("pressureClass", "Pressure Class: " + assetData.models[index].PressureClass); 
   updateElementContentById("comissionDate", "Commission Date: " + assetData.models[index].ComissionDate); 
-  updateHotspots(currentModel === 0); // Show sensor positions only for main model initially
+  updateHotspots(currentModel === 0 && showPositions); // Ensure consistent hotspot update based on the main model or not
 };
 
 // Load a model by name and update hotspots
@@ -220,6 +223,12 @@ const loadModelByName = (modelName) => {
 //Updates hotspot annotations
 const updateHotspots = (showPositions) => {
   const jsonFile = showPositions && currentModel === 0 ? "sensorposition_new.json" : "hotspots.json";
+  console.log("Show positions value: " + showPositions);
+   if (jsonFile === "sensorposition_new.json") {
+    console.log("Accessing sensorposition_new.json");
+  } else {
+    console.log("Accessing hotspots.json");
+  }
   fetch(jsonFile)
     .then(response => response.json())
     .then(data => {
@@ -238,7 +247,7 @@ const updateHotspots = (showPositions) => {
         const annotation = document.createElement("div");
         annotation.className = "HotspotAnnotation";
         // Use sensor-name for the annotation text if showPositions is true
-        annotation.textContent = showPositions ? hotspot["sensor-name"] : hotspot.name;
+        annotation.textContent = showPositions && currentModel === 0 ? hotspot["sensor-name"] : hotspot.name;
         button.appendChild(annotation);
 
         button.addEventListener("click", () => {
@@ -285,8 +294,10 @@ function updateAttributesFromModel(modelDetails) {
 //Site Overview button click
 document.getElementById("siteoverviewbutton").addEventListener("click", () => {
   currentModel = 0;
+  showPositions = false; 
   loadModel(currentModel);
   // Explicitly set sensor positions to not show when loading the main model
   updateElementContentById("livedatabuttonstring", "Show Sensor Positions");
+  loadModel(currentModel);
   updateHotspots(false); // Make sure sensor positions are not shown by default when returning to the main model
 });

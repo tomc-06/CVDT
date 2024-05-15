@@ -7,49 +7,49 @@
       "hotspots": [
         {
           "name": "HP Reservoir",
-          "sensor-name": "P, T, WT",
+          "sensor-name": "",
           "data-position": [63, -0.5, 72.9],
           "data-normal": [0.069, 0.917, -0.394]
         },
         {
           "name": "Isolation Valves",
-          "sensor-name": "P, T, WT",
+          "sensor-name": "",
           "data-position": [-1.01, 0.614, 60.787],
           "data-normal": [0.000, 0.995, 0.100]
         },
         {
           "name": "Filter Meter Area",
-          "sensor-name": "DP",
+          "sensor-name": "",
           "data-position": [-11.59, 2.99, 39.9],
           "data-normal": [0.025, 1.000, -0.005]
         },
         {
           "name": "Flow Control Valve",
-          "sensor-name": "P, T, WT",
+          "sensor-name": "",
           "data-position": [-19, 3.94, 33.914],
           "data-normal": [0.990, -0.010, -0.139]
         },
         {
           "name": "Pressure Reduction",
-          "sensor-name": "P, T, WT, P, T, WT",
+          "sensor-name": "",
           "data-position": [-13.483, 3.147, 7.773],
           "data-normal": [0.00, 1.00, 0.00]
         },
         {
           "name": "Block Valve",
-          "sensor-name": "P, T, WT, P, T, WT",
+          "sensor-name": "",
           "data-position": [-5.59, 4.878, -8.043],
           "data-normal": [-0.017, 0.995, 0.102]
         },
         {
           "name": "LP Reservoir",
-          "sensor-name": "P, T, WT",
+          "sensor-name": "",
           "data-position": [11.37, 3.84, 4.31],
           "data-normal": [0.156, 0.987, 0.024]
         },
         {
           "name": "Compression",
-          "sensor-name": "P, T, WT, P, T, WT",
+          "sensor-name": "",
           "data-position": [9.26, 5.739, 35.27],
           "data-normal": [0.000, 1.000, 0.000]
         }
