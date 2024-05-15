@@ -182,7 +182,7 @@ const loadModel = (index) => {
   updateAttributesFromModel(modelData);
   console.log("Current model", index);
    // Ensure the button state is correct for the loaded model
-   const showSensorButtonState = (currentModel === 0) ? "Show Sensor Positions" : "Show Sensor Positions";
+   const showSensorButtonState = (currentModel === 0) ? "Show Sensor Positions" : "Show Sensor Positions"; // Text stays same
    updateElementContentById("livedatabuttonstring", showSensorButtonState);
   console.log("Attempting to load index:", index);
   updateElementContentById("areaName", assetData.models[index].name);
