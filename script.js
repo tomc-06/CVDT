@@ -168,7 +168,7 @@ const loadModel = (index) => {
   modelViewer.setAttribute("src", modelData.src);
 
   if (index === 0) {
-    const iosSrc = modelData.iosSrc || modelData.src.replace('.glb', '.usdz');
+    const iosSrc = modelData.iosSrc || modelData.src.replace('.glb', '.glb');
     modelViewer.setAttribute("ios-src", iosSrc);
     console.log(`Switching to USDZ: ${iosSrc}`);
   } else {
